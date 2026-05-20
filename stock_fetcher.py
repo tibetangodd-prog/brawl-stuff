@@ -115,6 +115,6 @@ if __name__ == "__main__":
     stocks = fetch_stock_data()
     
     # Save to docs folder for GitHub Pages
-    save_to_json(stocks, "docs/api/stocks.json")
+    save_to_json(stocks, "api/stocks.json")
     
     print(f"\nDone! {len(stocks)}/{len(STOCK_SYMBOLS)} stocks fetched successfully.")
