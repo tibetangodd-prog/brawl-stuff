@@ -355,6 +355,34 @@ body {
 .notif.info { border-color: var(--blue); color: var(--blue); }
 @keyframes slideIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
 
+.market-filter-btn {
+  padding: 5px 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.market-filter-btn.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.market-tag {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.market-tag.US { background: var(--blue-bg); color: var(--blue); }
+.market-tag.TW { background: var(--red-bg); color: var(--red); }
+
 .empty-state { padding: 40px; text-align: center; color: var(--text3); font-size: 13px; }
 .loading-row { padding: 24px; text-align: center; color: var(--text3); font-size: 13px; }
 </style>
@@ -386,6 +414,14 @@ body {
     <div class="panel-header">
       <span>📊 即時行情</span>
       <span id="market-updated" style="font-size:11px;font-weight:400;color:var(--text3)">載入中...</span>
+    </div>
+    <div style="background:var(--blue-bg);border-bottom:1px solid var(--border);padding:8px 14px;font-size:12px;color:var(--blue)">
+      ℹ️ 本遊戲提供美股前100大熱門股票及台股前100大熱門股票供虛擬買賣，股價資料每15分鐘自動更新
+    </div>
+    <div style="display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--border)">
+      <button class="market-filter-btn active" onclick="filterMarket('all', this)">全部</button>
+      <button class="market-filter-btn" onclick="filterMarket('US', this)">🇺🇸 美股</button>
+      <button class="market-filter-btn" onclick="filterMarket('TW', this)">🇹🇼 台股</button>
     </div>
     <div class="stock-search">
       <input type="text" id="stock-search" placeholder="搜尋股票代號或名稱..." oninput="filterStocks()">
@@ -579,6 +615,14 @@ let sortAsc = false;
 let tradeSymbol = null;
 let tradePrice = 0;
 let tradeType = 'buy';
+let marketFilter = 'all';
+
+function filterMarket(market, btn) {
+  marketFilter = market;
+  document.querySelectorAll('.market-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterStocks();
+}
 
 // ══════════════════════════════════════
 // INIT
@@ -596,12 +640,15 @@ async function loadStocks() {
   try {
     const res = await fetch(STOCK_API_URL + '?t=' + Date.now());
     const data = await res.json();
-    stocks = data.stocks || [];
+    // 合併美股和台股，加上 market 標記
+    const us = (data.us_stocks || data.stocks || []).map(s => ({...s, market: s.market || 'US'}));
+    const tw = (data.tw_stocks || []).map(s => ({...s, market: 'TW'}));
+    stocks = [...us, ...tw];
     filtered = [...stocks];
     applySort();
     renderStocks();
     document.getElementById('market-updated').textContent =
-      '更新: ' + new Date(data.updated_at).toLocaleTimeString('zh-TW');
+      '美股 ' + us.length + ' 支 · 台股 ' + tw.length + ' 支 · 更新: ' + new Date(data.updated_at).toLocaleTimeString('zh-TW');
     renderPortfolio();
   } catch(e) {
     document.getElementById('stock-tbody').innerHTML =
@@ -611,9 +658,11 @@ async function loadStocks() {
 
 function filterStocks() {
   const q = document.getElementById('stock-search').value.toLowerCase();
-  filtered = stocks.filter(s =>
-    s.symbol.toLowerCase().includes(q) || (s.name||'').toLowerCase().includes(q)
-  );
+  filtered = stocks.filter(s => {
+    const matchMarket = marketFilter === 'all' || s.market === marketFilter;
+    const matchQuery = s.symbol.toLowerCase().includes(q) || (s.name||'').toLowerCase().includes(q);
+    return matchMarket && matchQuery;
+  });
   applySort();
   renderStocks();
 }
@@ -643,14 +692,15 @@ function renderStocks() {
   tbody.innerHTML = filtered.map(s => {
     const cls = s.change_pct > 0 ? 'up' : s.change_pct < 0 ? 'down' : 'flat';
     const sign = s.change_pct > 0 ? '+' : '';
+    const currency = s.market === 'TW' ? 'NT$' : '$';
     return `<tr onclick="openModal('${s.symbol}')">
       <td>
-        <div class="stock-symbol">${s.symbol}</div>
+        <div class="stock-symbol">${s.symbol}<span class="market-tag ${s.market}">${s.market}</span></div>
         <div class="stock-name">${s.name||''}</div>
       </td>
       <td style="color:var(--text2);font-size:12px">${s.currency||'USD'}</td>
       <td style="text-align:right">
-        <span class="price ${cls}">$${s.price.toFixed(2)}</span>
+        <span class="price ${cls}">${currency}${s.price.toFixed(2)}</span>
       </td>
       <td style="text-align:right">
         <span class="change-pct ${cls}">${sign}${s.change_pct.toFixed(2)}%</span><br>
