@@ -783,25 +783,32 @@ function confirmTrade() {
   if (qty <= 0) { showNotif('請輸入有效數量', 'error'); return; }
 
   const stock = stocks.find(s => s.symbol === tradeSymbol);
-  if (!stock) return;
+  if (!stock) { showNotif('找不到股票資料', 'error'); return; }
 
-  const price = stock.price;
+  // 使用開啟 modal 時鎖定的價格，避免重新抓取造成計算錯誤
+  const price = tradePrice;
+  if (!price || isNaN(price) || price <= 0) { showNotif('股價資料異常', 'error'); return; }
+
   const { sub, fee, tax, total } = calcFees(price, qty, tradeType);
+  if (isNaN(total) || total <= 0) { showNotif('計算異常，請重試', 'error'); return; }
+
   const portfolio = state.portfolio;
   const holding = portfolio[tradeSymbol] || { qty: 0, avgCost: 0 };
 
   if (tradeType === 'buy') {
     if (state.coins < total) { showNotif('餘額不足！', 'error'); return; }
-    state.coins -= total;
+    state.coins = parseFloat((state.coins - total).toFixed(2));
     const newQty = holding.qty + qty;
     portfolio[tradeSymbol] = {
       qty: newQty,
-      avgCost: (holding.avgCost * holding.qty + sub) / newQty,
-      name: stock.name || tradeSymbol
+      avgCost: parseFloat(((holding.avgCost * holding.qty + sub) / newQty).toFixed(4)),
+      name: stock.name || tradeSymbol,
+      market: stock.market || 'US',
+      currency: stock.currency || 'USD'
     };
   } else {
     if (holding.qty < qty) { showNotif('持股不足！', 'error'); return; }
-    state.coins += total;
+    state.coins = parseFloat((state.coins + total).toFixed(2));
     const newQty = holding.qty - qty;
     if (newQty === 0) delete portfolio[tradeSymbol];
     else portfolio[tradeSymbol] = { ...holding, qty: newQty };
