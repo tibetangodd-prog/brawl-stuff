@@ -866,13 +866,18 @@ function tick() {
   document.getElementById('bonus-timer').textContent =
     pad(h) + ':' + pad(m) + ':' + pad(s);
 
-  // Check if bonus due
-  if (Date.now() - state.lastBonusAt >= 3600000) {
-    state.coins += HOURLY_BONUS;
-    state.lastBonusAt = Date.now();
+  // Check if bonus due — pay out all missed hours at once
+  const hoursElapsed = Math.floor((Date.now() - state.lastBonusAt) / 3600000);
+  if (hoursElapsed >= 1) {
+    const bonus = hoursElapsed * HOURLY_BONUS;
+    state.coins += bonus;
+    state.lastBonusAt += hoursElapsed * 3600000;
     save();
     updateCoins();
-    showNotif('🎉 獲得每小時獎勵 +$' + HOURLY_BONUS + '！', 'info');
+    const msg = hoursElapsed === 1
+      ? '🎉 獲得每小時獎勵 +$' + bonus + '！'
+      : '🎉 離線 ' + hoursElapsed + ' 小時，補發 +$' + bonus + '！';
+    showNotif(msg, 'info');
   }
 }
 
