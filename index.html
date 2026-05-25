@@ -427,8 +427,7 @@ body {
     <div class="stock-search">
       <input type="text" id="stock-search" placeholder="搜尋股票代號或名稱..." oninput="filterStocks()">
     </div>
-    <div style="overflow-x:auto">
-      <table class="stock-table">
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
         <thead>
           <tr>
             <th onclick="sortBy('symbol')">代號 ↕</th>
@@ -466,21 +465,23 @@ body {
         <div class="stat-value" id="stat-pnl">$0</div>
       </div>
     </div>
-    <table class="port-table">
-      <thead>
-        <tr>
-          <th>代號</th>
-          <th>股數</th>
-          <th style="text-align:right">均價</th>
-          <th style="text-align:right">現價</th>
-          <th style="text-align:right">損益</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="port-tbody">
-        <tr><td colspan="6" class="empty-state">尚無持股</td></tr>
-      </tbody>
-    </table>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+      <table class="port-table">
+        <thead>
+          <tr>
+            <th>代號</th>
+            <th>股數</th>
+            <th style="text-align:right">均價</th>
+            <th style="text-align:right">現價</th>
+            <th style="text-align:right">損益</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="port-tbody">
+          <tr><td colspan="6" class="empty-state">尚無持股</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- HISTORY TAB -->
@@ -489,8 +490,7 @@ body {
       <span>交易記錄</span>
       <button class="btn-reset" onclick="clearHistory()" style="font-size:11px;padding:4px 10px">清除記錄</button>
     </div>
-    <div style="overflow-x:auto">
-      <table class="hist-table">
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
         <thead>
           <tr>
             <th>時間</th>
