@@ -6,471 +6,190 @@
 <title>股海爭霸 | 虛擬股票交易</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
-
 :root {
-  --bg: #0d1117;
-  --bg2: #161b22;
-  --bg3: #21262d;
-  --border: #30363d;
-  --text: #e6edf3;
-  --text2: #8b949e;
-  --text3: #484f58;
-  --green: #3fb950;
-  --green-bg: #0d2a1a;
-  --red: #f85149;
-  --red-bg: #2d1117;
-  --blue: #58a6ff;
-  --blue-bg: #0d2044;
-  --gold: #d29922;
-  --gold-bg: #271d04;
-  --radius: 8px;
-  --font: 'Noto Sans TC', sans-serif;
-  --mono: 'JetBrains Mono', monospace;
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;
+  --text:#e6edf3;--text2:#8b949e;--text3:#484f58;
+  --green:#3fb950;--green-bg:#0d2a1a;
+  --red:#f85149;--red-bg:#2d1117;
+  --blue:#58a6ff;--blue-bg:#0d2044;
+  --gold:#d29922;--gold-bg:#271d04;
+  --radius:8px;--font:'Noto Sans TC',sans-serif;--mono:'JetBrains Mono',monospace;
 }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* HEADER */
+.header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;flex-wrap:wrap;gap:6px;}
+.logo{font-size:17px;font-weight:700;color:var(--blue);}
+.header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.coins-badge{background:var(--gold-bg);border:1px solid var(--gold);border-radius:20px;padding:4px 12px;font-family:var(--mono);font-size:13px;color:var(--gold);font-weight:600;}
+.bonus-badge{background:var(--green-bg);border:1px solid var(--green);border-radius:12px;padding:3px 8px;font-size:11px;color:var(--green);font-weight:500;}
+.btn-ghost{background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:var(--radius);cursor:pointer;font-size:12px;font-family:var(--font);transition:all .2s;}
+.btn-ghost:hover{border-color:var(--red);color:var(--red);}
 
-body {
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  font-size: 14px;
-}
+/* LAYOUT */
+.layout{max-width:1300px;margin:0 auto;padding:12px;display:grid;grid-template-columns:1fr 270px;gap:12px;}
+@media(max-width:800px){.layout{grid-template-columns:1fr;}}
 
-/* ─── HEADER ─── */
-.header {
-  background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 56px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+/* TABS */
+.tabs{display:flex;gap:3px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:3px;grid-column:1/2;}
+.tab-btn{flex:1;padding:7px;background:transparent;border:none;border-radius:6px;color:var(--text2);cursor:pointer;font-family:var(--font);font-size:13px;font-weight:500;transition:all .15s;}
+.tab-btn.active{background:var(--bg3);color:var(--text);}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
 
-.header-logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--blue);
-}
+/* PANEL */
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+.panel-hdr{padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.8px;display:flex;align-items:center;justify-content:space-between;}
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+/* NOTICE */
+.notice{background:var(--blue-bg);border-bottom:1px solid var(--border);padding:7px 14px;font-size:11px;color:var(--blue);line-height:1.8;}
 
-.coins-display {
-  background: var(--gold-bg);
-  border: 1px solid var(--gold);
-  border-radius: 20px;
-  padding: 5px 14px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--gold);
-  font-weight: 600;
-}
+/* MARKET FILTER */
+.mfilter{display:flex;gap:6px;padding:8px 12px;border-bottom:1px solid var(--border);}
+.mf-btn{padding:4px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;color:var(--text2);cursor:pointer;font-size:11px;font-family:var(--font);font-weight:500;transition:all .15s;}
+.mf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;}
 
-.bonus-badge {
-  background: var(--green-bg);
-  border: 1px solid var(--green);
-  border-radius: 12px;
-  padding: 3px 10px;
-  font-size: 11px;
-  color: var(--green);
-  font-weight: 500;
-}
+/* SEARCH */
+.search-row{padding:8px 12px;border-bottom:1px solid var(--border);}
+.search-row input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:7px 10px;color:var(--text);font-size:13px;font-family:var(--font);outline:none;}
+.search-row input:focus{border-color:var(--blue);}
 
-.btn-reset {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  color: var(--text2);
-  padding: 6px 12px;
-  border-radius: var(--radius);
-  cursor: pointer;
-  font-size: 12px;
-  font-family: var(--font);
-  transition: all 0.2s;
-}
-.btn-reset:hover { border-color: var(--red); color: var(--red); }
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;min-width:400px;}
+.tbl th{padding:7px 10px;text-align:left;font-size:10px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none;white-space:nowrap;}
+.tbl th:hover{color:var(--text2);}
+.tbl td{padding:8px 10px;border-bottom:1px solid #21262d;font-size:12px;white-space:nowrap;}
+.tbl tr:hover td{background:var(--bg3);cursor:pointer;}
+.sym{font-family:var(--mono);font-weight:700;color:var(--blue);font-size:12px;}
+.sname{color:var(--text2);font-size:11px;max-width:140px;overflow:hidden;text-overflow:ellipsis;}
+.mtag{font-size:9px;padding:1px 5px;border-radius:3px;font-weight:700;margin-left:3px;vertical-align:middle;}
+.mtag.US{background:var(--blue-bg);color:var(--blue);}
+.mtag.TW{background:var(--red-bg);color:var(--red);}
+.up{color:var(--green);}
+.down{color:var(--red);}
+.flat{color:var(--text2);}
+.mono{font-family:var(--mono);}
 
-/* ─── LAYOUT ─── */
-.game-layout {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 16px;
-}
+/* BUTTONS */
+.btn{width:100%;padding:11px;border-radius:var(--radius);border:none;cursor:pointer;font-size:14px;font-weight:600;font-family:var(--font);transition:all .2s;}
+.btn-buy{background:var(--green);color:#0d1117;}
+.btn-sell{background:var(--red);color:#fff;}
+.btn-buy:hover,.btn-sell:hover{filter:brightness(1.1);}
+.btn-sm{width:auto;padding:4px 10px;font-size:11px;}
 
-@media (max-width: 800px) {
-  .game-layout { grid-template-columns: 1fr; }
-}
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;}
+.stat-card{background:var(--bg3);border-radius:var(--radius);padding:10px 12px;}
+.stat-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+.stat-val{font-family:var(--mono);font-size:15px;font-weight:700;}
 
-/* ─── TABS ─── */
-.main-tabs {
-  display: flex;
-  gap: 4px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 4px;
-  grid-column: 1 / 2;
-}
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;}
+.overlay.open{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;width:360px;max-width:95vw;position:relative;}
+.modal-close{position:absolute;top:12px;right:14px;background:transparent;border:none;color:var(--text2);font-size:20px;cursor:pointer;line-height:1;}
+.modal h2{font-size:17px;margin-bottom:3px;display:flex;align-items:center;gap:8px;}
+.modal-price{font-family:var(--mono);font-size:22px;font-weight:700;margin:10px 0 18px;}
+.trade-tabs{display:flex;gap:6px;margin-bottom:16px;}
+.ttab{flex:1;padding:7px;border:1px solid var(--border);border-radius:var(--radius);background:transparent;color:var(--text2);cursor:pointer;font-family:var(--font);font-weight:600;font-size:13px;transition:all .15s;}
+.ttab.buy.active{background:var(--green-bg);border-color:var(--green);color:var(--green);}
+.ttab.sell.active{background:var(--red-bg);border-color:var(--red);color:var(--red);}
+.qty-row{display:flex;align-items:center;gap:6px;margin-bottom:14px;}
+.qty-row input{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:9px;color:var(--text);font-size:16px;font-family:var(--mono);font-weight:700;outline:none;text-align:center;}
+.qbtn{width:34px;height:34px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.qbtn:hover{border-color:var(--blue);}
+.summary{background:var(--bg3);border-radius:var(--radius);padding:10px 12px;margin-bottom:14px;font-size:12px;}
+.srow{display:flex;justify-content:space-between;padding:2px 0;color:var(--text2);}
+.srow.total{color:var(--text);font-weight:600;font-size:13px;border-top:1px solid var(--border);margin-top:5px;padding-top:7px;}
+.after-txt{font-size:11px;color:var(--text3);margin-bottom:12px;}
 
-.tab-btn {
-  flex: 1;
-  padding: 8px 16px;
-  background: transparent;
-  border: none;
-  border-radius: 6px;
-  color: var(--text2);
-  cursor: pointer;
-  font-family: var(--font);
-  font-size: 13px;
-  font-weight: 500;
-  transition: all 0.15s;
-}
-.tab-btn.active { background: var(--bg3); color: var(--text); }
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.timer-box{text-align:center;padding:12px;background:var(--green-bg);border-radius:var(--radius);border:1px solid #1a3d29;}
+.timer-lbl{font-size:10px;color:var(--green);font-weight:600;letter-spacing:.5px;margin-bottom:5px;}
+.timer-val{font-family:var(--mono);font-size:26px;font-weight:700;color:var(--green);}
+.timer-sub{font-size:10px;color:#3fb95077;margin-top:3px;}
 
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-/* ─── PANEL ─── */
-.panel {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.panel-header {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text2);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ─── STOCK TABLE ─── */
-.stock-search {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--border);
-}
-.stock-search input {
-  width: 100%;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 8px 12px;
-  color: var(--text);
-  font-size: 13px;
-  font-family: var(--font);
-  outline: none;
-}
-.stock-search input:focus { border-color: var(--blue); }
-
-.stock-table { width: 100%; border-collapse: collapse; }
-
-.stock-table th {
-  padding: 8px 12px;
-  text-align: left;
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--text3);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  user-select: none;
-}
-.stock-table th:hover { color: var(--text2); }
-.stock-table td { padding: 9px 12px; border-bottom: 1px solid #21262d; font-size: 13px; }
-.stock-table tr:hover td { background: var(--bg3); cursor: pointer; }
-
-.stock-symbol { font-family: var(--mono); font-weight: 600; color: var(--blue); font-size: 13px; }
-.stock-name { color: var(--text2); font-size: 12px; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.up { color: var(--green); }
-.down { color: var(--red); }
-.flat { color: var(--text2); }
-.price { font-family: var(--mono); font-weight: 600; }
-.change-pct { font-family: var(--mono); font-size: 12px; font-weight: 600; }
-
-/* ─── BUTTONS ─── */
-.btn { padding: 12px; border-radius: var(--radius); border: none; cursor: pointer; font-size: 14px; font-weight: 600; font-family: var(--font); transition: all 0.2s; width: 100%; }
-.btn-sm { width: auto; padding: 5px 12px; font-size: 12px; }
-.btn-buy { background: var(--green); color: #0d1117; }
-.btn-sell { background: var(--red); color: white; }
-.btn-buy:hover { filter: brightness(1.1); }
-.btn-sell:hover { filter: brightness(1.1); }
-
-/* ─── TRADE MODAL ─── */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-}
-.modal-overlay.open { display: flex; }
-
-.modal {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  width: 380px;
-  max-width: 95vw;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 14px; right: 16px;
-  background: transparent;
-  border: none;
-  color: var(--text2);
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.modal h2 { font-size: 18px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
-.modal-price { font-family: var(--mono); font-size: 24px; font-weight: 700; margin: 12px 0 20px; }
-
-.trade-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
-.trade-tab {
-  flex: 1; padding: 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: transparent;
-  color: var(--text2);
-  cursor: pointer;
-  font-family: var(--font);
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.15s;
-}
-.trade-tab.buy.active { background: var(--green-bg); border-color: var(--green); color: var(--green); }
-.trade-tab.sell.active { background: var(--red-bg); border-color: var(--red); color: var(--red); }
-
-.qty-row { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
-.qty-row input {
-  flex: 1;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 10px 14px;
-  color: var(--text);
-  font-size: 16px;
-  font-family: var(--mono);
-  font-weight: 600;
-  outline: none;
-  text-align: center;
-}
-.qty-btn {
-  width: 36px; height: 36px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text);
-  cursor: pointer;
-  font-size: 16px;
-  display: flex; align-items: center; justify-content: center;
-}
-.qty-btn:hover { border-color: var(--blue); }
-
-.trade-summary {
-  background: var(--bg3);
-  border-radius: var(--radius);
-  padding: 12px;
-  margin-bottom: 16px;
-  font-size: 12px;
-}
-.sum-row { display: flex; justify-content: space-between; padding: 3px 0; color: var(--text2); }
-.sum-row.total {
-  color: var(--text); font-weight: 600; font-size: 13px;
-  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 8px;
-}
-
-/* ─── PORTFOLIO ─── */
-.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; }
-.stat-card { background: var(--bg3); border-radius: var(--radius); padding: 12px; }
-.stat-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-.stat-value { font-family: var(--mono); font-size: 16px; font-weight: 700; }
-
-.port-table { width: 100%; border-collapse: collapse; }
-.port-table th { padding: 8px 12px; text-align: left; font-size: 11px; color: var(--text3); text-transform: uppercase; border-bottom: 1px solid var(--border); }
-.port-table td { padding: 10px 12px; border-bottom: 1px solid #21262d; font-size: 13px; }
-.port-table tr:hover td { background: var(--bg3); cursor: pointer; }
-
-/* ─── SIDEBAR ─── */
-.sidebar { display: flex; flex-direction: column; gap: 16px; }
-
-.bonus-timer {
-  text-align: center;
-  padding: 14px;
-  background: var(--green-bg);
-  border-radius: var(--radius);
-  border: 1px solid #1a3d29;
-}
-.timer-label { font-size: 11px; color: var(--green); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 6px; }
-.timer-value { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--green); }
-.timer-sub { font-size: 11px; color: #3fb95088; margin-top: 4px; }
-
-/* ─── HISTORY ─── */
-.hist-table { width: 100%; border-collapse: collapse; }
-.hist-table th { padding: 8px 12px; text-align: left; font-size: 11px; color: var(--text3); text-transform: uppercase; border-bottom: 1px solid var(--border); }
-.hist-table td { padding: 9px 12px; border-bottom: 1px solid #21262d; font-size: 12px; }
-
-/* ─── NOTIF ─── */
-.notif {
-  position: fixed;
-  bottom: 24px; right: 24px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px 18px;
-  font-size: 13px;
-  z-index: 999;
-  display: none;
-  max-width: 300px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  animation: slideIn 0.3s ease;
-}
-.notif.success { border-color: var(--green); color: var(--green); }
-.notif.error { border-color: var(--red); color: var(--red); }
-.notif.info { border-color: var(--blue); color: var(--blue); }
-@keyframes slideIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-
-.market-filter-btn {
-  padding: 5px 14px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  color: var(--text2);
-  cursor: pointer;
-  font-size: 12px;
-  font-family: var(--font);
-  font-weight: 500;
-  transition: all 0.15s;
-}
-.market-filter-btn.active {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: white;
-}
-
-.market-tag {
-  font-size: 10px;
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-  margin-left: 4px;
-}
-.market-tag.US { background: var(--blue-bg); color: var(--blue); }
-.market-tag.TW { background: var(--red-bg); color: var(--red); }
-
-.empty-state { padding: 40px; text-align: center; color: var(--text3); font-size: 13px; }
-.loading-row { padding: 24px; text-align: center; color: var(--text3); font-size: 13px; }
+/* NOTIF */
+.notif{position:fixed;bottom:20px;right:20px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:10px 16px;font-size:13px;z-index:999;display:none;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:slideIn .3s ease;}
+.notif.success{border-color:var(--green);color:var(--green);}
+.notif.error{border-color:var(--red);color:var(--red);}
+.notif.info{border-color:var(--blue);color:var(--blue);}
+@keyframes slideIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.empty{padding:32px;text-align:center;color:var(--text3);font-size:13px;}
+.loading{padding:20px;text-align:center;color:var(--text3);font-size:13px;}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
-  <div class="header-logo">📈 股海爭霸</div>
+  <div class="logo">📈 股海爭霸</div>
   <div class="header-right">
     <div class="bonus-badge">⏰ 每小時自動 +$500</div>
-    <div class="coins-display" id="coins-display">💰 $10,000</div>
-    <button class="btn-reset" onclick="confirmReset()">重置遊戲</button>
+    <div class="coins-badge" id="coins-display">💰 $10,000.00</div>
+    <button class="btn-ghost" onclick="confirmReset()">重置遊戲</button>
   </div>
 </div>
 
-<!-- MAIN LAYOUT -->
-<div class="game-layout">
+<div class="layout">
 
-  <!-- TABS -->
-  <div class="main-tabs">
-    <button class="tab-btn active" onclick="switchTab('market', this)">市場行情</button>
-    <button class="tab-btn" onclick="switchTab('portfolio', this)">我的持股</button>
-    <button class="tab-btn" onclick="switchTab('history', this)">交易記錄</button>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('market',this)">市場行情</button>
+    <button class="tab-btn" onclick="switchTab('portfolio',this)">我的持股</button>
+    <button class="tab-btn" onclick="switchTab('history',this)">交易記錄</button>
   </div>
 
-  <!-- MARKET TAB -->
+  <!-- MARKET -->
   <div id="tab-market" class="tab-content active panel">
-    <div class="panel-header">
+    <div class="panel-hdr">
       <span>📊 即時行情</span>
-      <span id="market-updated" style="font-size:11px;font-weight:400;color:var(--text3)">載入中...</span>
+      <span id="mkt-updated" style="font-size:10px;font-weight:400;color:var(--text3)">載入中...</span>
     </div>
-    <div style="background:var(--blue-bg);border-bottom:1px solid var(--border);padding:8px 14px;font-size:12px;color:var(--blue);line-height:1.8">
-      ℹ️ 本遊戲提供美股前100大熱門股票及台股前100大熱門股票供虛擬買賣，股價資料每15分鐘自動更新<br>
+    <div class="notice">
+      ℹ️ 本遊戲提供美股前100大及台股前100大熱門股票供虛擬買賣，股價每15分鐘自動更新<br>
       ⚠️ 本遊戲幣值不進行匯率換算，美金與臺幣價值相等
     </div>
-    <div style="display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--border)">
-      <button class="market-filter-btn active" onclick="filterMarket('all', this)">全部</button>
-      <button class="market-filter-btn" onclick="filterMarket('US', this)">🇺🇸 美股</button>
-      <button class="market-filter-btn" onclick="filterMarket('TW', this)">🇹🇼 台股</button>
+    <div class="mfilter">
+      <button class="mf-btn active" onclick="setMarket('all',this)">全部</button>
+      <button class="mf-btn" onclick="setMarket('US',this)">🇺🇸 美股</button>
+      <button class="mf-btn" onclick="setMarket('TW',this)">🇹🇼 台股</button>
     </div>
-    <div class="stock-search">
-      <input type="text" id="stock-search" placeholder="搜尋股票代號或名稱..." oninput="filterStocks()">
+    <div class="search-row">
+      <input type="text" id="search" placeholder="搜尋代號或名稱..." oninput="renderMarket()">
     </div>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+      <table class="tbl">
         <thead>
           <tr>
-            <th onclick="sortBy('symbol')">代號 ↕</th>
-            <th>公司</th>
-            <th onclick="sortBy('price')" style="text-align:right">現價 ↕</th>
-            <th onclick="sortBy('change_pct')" style="text-align:right">漲跌 ↕</th>
+            <th onclick="sortBy('symbol')">代號</th>
+            <th>名稱</th>
+            <th onclick="sortBy('price')" style="text-align:right">現價</th>
+            <th onclick="sortBy('change_pct')" style="text-align:right">漲跌</th>
             <th style="text-align:center">操作</th>
           </tr>
         </thead>
-        <tbody id="stock-tbody">
-          <tr><td colspan="5" class="loading-row">⏳ 載入股票資料中...</td></tr>
+        <tbody id="market-tbody">
+          <tr><td colspan="5" class="loading">⏳ 載入中...</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- PORTFOLIO TAB -->
+  <!-- PORTFOLIO -->
   <div id="tab-portfolio" class="tab-content panel">
-    <div class="panel-header">我的持股</div>
+    <div class="panel-hdr">我的持股</div>
     <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">現金</div>
-        <div class="stat-value up" id="stat-cash">$0</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">持股市值</div>
-        <div class="stat-value" id="stat-sv">$0</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">總資產</div>
-        <div class="stat-value" id="stat-total">$0</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">未實現損益</div>
-        <div class="stat-value" id="stat-pnl">$0</div>
-      </div>
+      <div class="stat-card"><div class="stat-lbl">現金</div><div class="stat-val up" id="s-cash">$0</div></div>
+      <div class="stat-card"><div class="stat-lbl">持股市值</div><div class="stat-val" id="s-sv">$0</div></div>
+      <div class="stat-card"><div class="stat-lbl">總資產</div><div class="stat-val" id="s-total">$0</div></div>
+      <div class="stat-card"><div class="stat-lbl">未實現損益</div><div class="stat-val" id="s-pnl">$0</div></div>
     </div>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-      <table class="port-table">
+      <table class="tbl">
         <thead>
           <tr>
-            <th>代號</th>
-            <th>股數</th>
+            <th>代號</th><th>股數</th>
             <th style="text-align:right">均價</th>
             <th style="text-align:right">現價</th>
             <th style="text-align:right">損益</th>
@@ -478,24 +197,23 @@ body {
           </tr>
         </thead>
         <tbody id="port-tbody">
-          <tr><td colspan="6" class="empty-state">尚無持股</td></tr>
+          <tr><td colspan="6" class="empty">尚無持股</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- HISTORY TAB -->
+  <!-- HISTORY -->
   <div id="tab-history" class="tab-content panel">
-    <div class="panel-header">
+    <div class="panel-hdr">
       <span>交易記錄</span>
-      <button class="btn-reset" onclick="clearHistory()" style="font-size:11px;padding:4px 10px">清除記錄</button>
+      <button class="btn-ghost" onclick="clearHistory()" style="font-size:11px;padding:3px 8px">清除</button>
     </div>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+      <table class="tbl">
         <thead>
           <tr>
-            <th>時間</th>
-            <th>代號</th>
-            <th>類型</th>
+            <th>時間</th><th>代號</th><th>類型</th>
             <th style="text-align:right">股數</th>
             <th style="text-align:right">價格</th>
             <th style="text-align:right">手續費</th>
@@ -503,7 +221,7 @@ body {
           </tr>
         </thead>
         <tbody id="hist-tbody">
-          <tr><td colspan="7" class="empty-state">尚無記錄</td></tr>
+          <tr><td colspan="7" class="empty">尚無記錄</td></tr>
         </tbody>
       </table>
     </div>
@@ -511,442 +229,422 @@ body {
 
   <!-- SIDEBAR -->
   <div class="sidebar">
-
-    <!-- BONUS TIMER -->
-    <div class="panel" style="padding:14px">
-      <div class="bonus-timer">
-        <div class="timer-label">⏰ 距離下次領取獎勵</div>
-        <div class="timer-value" id="bonus-timer">00:00:00</div>
+    <div class="panel" style="padding:12px">
+      <div class="timer-box">
+        <div class="timer-lbl">⏰ 距離下次獎勵</div>
+        <div class="timer-val" id="timer">00:00:00</div>
         <div class="timer-sub">每小時自動獲得 +$500</div>
       </div>
     </div>
-
-
-
   </div>
+
 </div>
 
 <!-- TRADE MODAL -->
-<div class="modal-overlay" id="trade-modal" onclick="closeModalOutside(event)">
+<div class="overlay" id="overlay" onclick="overlayClick(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h2>
-      <span class="stock-symbol" id="modal-symbol">AAPL</span>
-      <span style="font-size:13px;color:var(--text2);font-weight:400" id="modal-name"></span>
+      <span class="sym" id="m-sym">AAPL</span>
+      <span style="font-size:12px;color:var(--text2);font-weight:400" id="m-name"></span>
     </h2>
-    <div class="modal-price" id="modal-price">$0.00</div>
-
+    <div class="modal-price" id="m-price">$0.00</div>
     <div class="trade-tabs">
-      <button class="trade-tab buy active" onclick="setTradeType('buy')">買入</button>
-      <button class="trade-tab sell" onclick="setTradeType('sell')">賣出</button>
+      <button class="ttab buy active" onclick="setType('buy')">買入</button>
+      <button class="ttab sell" onclick="setType('sell')">賣出</button>
     </div>
-
     <div class="qty-row">
-      <button class="qty-btn" onclick="adjustQty(-10)">−</button>
-      <button class="qty-btn" onclick="adjustQty(-1)" style="font-size:12px">-1</button>
-      <input type="number" id="trade-qty" value="1" min="1" oninput="updateSummary()">
-      <button class="qty-btn" onclick="adjustQty(1)" style="font-size:12px">+1</button>
-      <button class="qty-btn" onclick="adjustQty(10)">+</button>
+      <button class="qbtn" onclick="adjQty(-10)">−</button>
+      <button class="qbtn" onclick="adjQty(-1)" style="font-size:11px">-1</button>
+      <input type="number" id="qty" value="1" min="1" oninput="updateSummary()">
+      <button class="qbtn" onclick="adjQty(1)" style="font-size:11px">+1</button>
+      <button class="qbtn" onclick="adjQty(10)">+</button>
     </div>
-
-    <div class="trade-summary">
-      <div class="sum-row"><span>股數</span><span id="sum-qty">1 股</span></div>
-      <div class="sum-row"><span>股價</span><span id="sum-price">$0.00</span></div>
-      <div class="sum-row"><span>小計</span><span id="sum-sub">$0.00</span></div>
-      <div class="sum-row"><span>手續費 (0.1425%)</span><span id="sum-fee">$0.00</span></div>
-      <div class="sum-row" id="tax-row"><span>證交稅 (0.3%)</span><span id="sum-tax">$0.00</span></div>
-      <div class="sum-row total">
-        <span id="sum-action">需支付</span>
-        <span id="sum-total">$0.00</span>
-      </div>
+    <div class="summary">
+      <div class="srow"><span>股數</span><span id="s-qty">1 股</span></div>
+      <div class="srow"><span>股價</span><span id="s-price">$0.00</span></div>
+      <div class="srow"><span>小計</span><span id="s-sub">$0.00</span></div>
+      <div class="srow"><span>手續費 (0.1425%)</span><span id="s-fee">$0.00</span></div>
+      <div class="srow" id="tax-row"><span>證交稅 (0.3%)</span><span id="s-tax">$0.00</span></div>
+      <div class="srow total"><span id="s-action">需支付</span><span id="s-total">$0.00</span></div>
     </div>
-
-    <div style="font-size:11px;color:var(--text3);margin-bottom:12px" id="sum-after"></div>
-    <button class="btn btn-buy" id="confirm-btn" onclick="confirmTrade()">確認買入</button>
+    <div class="after-txt" id="s-after"></div>
+    <button class="btn btn-buy" id="confirm-btn" onclick="doTrade()">確認買入</button>
   </div>
 </div>
 
-<!-- NOTIF -->
 <div class="notif" id="notif"></div>
 
 <script>
 // ══════════════════════════════════════
 // 設定
 // ══════════════════════════════════════
-const STOCK_API_URL = 'https://tibetangodd-prog.github.io/brawl-stuff/api/stocks.json';
-const INITIAL_COINS = 10000;
+const API_URL       = 'https://tibetangodd-prog.github.io/brawl-stuff/api/stocks.json';
+const INIT_COINS    = 10000;
 const HOURLY_BONUS  = 500;
-const BUY_FEE       = 0.001425;
-const SELL_FEE      = 0.001425;
-const SELL_TAX      = 0.003;
+const BUY_FEE_RATE  = 0.001425;
+const SELL_FEE_RATE = 0.001425;
+const SELL_TAX_RATE = 0.003;
 const MIN_FEE       = 1;
 
 // ══════════════════════════════════════
-// 本地存檔
+// 存檔
 // ══════════════════════════════════════
-function loadSave() {
+function loadState() {
   try {
-    const s = localStorage.getItem('stockgame');
-    if (s) return JSON.parse(s);
+    const raw = localStorage.getItem('sgame2');
+    if (raw) return JSON.parse(raw);
   } catch(e) {}
   return null;
 }
-
-function initSave() {
-  return {
-    coins: INITIAL_COINS,
-    portfolio: {},
-    history: [],
-    lastBonusAt: Date.now()
-  };
+function newState() {
+  return { coins: INIT_COINS, portfolio: {}, history: [], lastBonus: Date.now() };
+}
+function saveState() {
+  localStorage.setItem('sgame2', JSON.stringify(G));
 }
 
-function save() {
-  localStorage.setItem('stockgame', JSON.stringify(state));
-}
+let G = loadState() || newState();
 
 // ══════════════════════════════════════
-// STATE
+// 股票資料
 // ══════════════════════════════════════
-let state = loadSave() || initSave();
-let stocks = [];
-let filtered = [];
-let sortField = 'change_pct';
-let sortAsc = false;
-let tradeSymbol = null;
-let tradePrice = 0;
-let tradeType = 'buy';
-let marketFilter = 'all';
+let allStocks   = [];   // 全部股票
+let mktFilter   = 'all';
+let sortField   = 'change_pct';
+let sortAsc     = false;
 
-function filterMarket(market, btn) {
-  marketFilter = market;
-  document.querySelectorAll('.market-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  filterStocks();
-}
-
-// ══════════════════════════════════════
-// INIT
-// ══════════════════════════════════════
-loadStocks();
-setInterval(loadStocks, 5 * 60 * 1000);
-setInterval(tick, 1000);
-updateCoins();
-renderHistory();
-
-// ══════════════════════════════════════
-// STOCKS
-// ══════════════════════════════════════
 async function loadStocks() {
   try {
-    const res = await fetch(STOCK_API_URL + '?t=' + Date.now());
-    const data = await res.json();
-    // 合併美股和台股，加上 market 標記
-    const us = (data.us_stocks || data.stocks || []).map(s => ({...s, market: s.market || 'US'}));
-    const tw = (data.tw_stocks || []).map(s => ({...s, market: 'TW'}));
-    stocks = [...us, ...tw];
-    filtered = [...stocks];
-    applySort();
-    renderStocks();
-    document.getElementById('market-updated').textContent =
-      '美股 ' + us.length + ' 支 · 台股 ' + tw.length + ' 支 · 更新: ' + new Date(data.updated_at).toLocaleTimeString('zh-TW');
+    const r = await fetch(API_URL + '?_=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+
+    // 支援新格式（us_stocks/tw_stocks）和舊格式（stocks）
+    const us = Array.isArray(d.us_stocks) ? d.us_stocks : [];
+    const tw = Array.isArray(d.tw_stocks) ? d.tw_stocks : [];
+    const legacy = Array.isArray(d.stocks) ? d.stocks : [];
+
+    // 確保每筆都有 market 欄位
+    allStocks = [
+      ...us.map(s => ({...s, market: 'US', price: Number(s.price), change_pct: Number(s.change_pct), change: Number(s.change)})),
+      ...tw.map(s => ({...s, market: 'TW', price: Number(s.price), change_pct: Number(s.change_pct), change: Number(s.change)})),
+      ...legacy.map(s => ({...s, market: s.market||'US', price: Number(s.price), change_pct: Number(s.change_pct), change: Number(s.change)})),
+    ].filter(s => s.price > 0 && !isNaN(s.price)); // 過濾掉價格異常的
+
+    const upd = d.updated_at ? new Date(d.updated_at).toLocaleTimeString('zh-TW') : '未知';
+    document.getElementById('mkt-updated').textContent =
+      '美股' + us.length + ' 台股' + tw.length + ' · ' + upd;
+
+    renderMarket();
     renderPortfolio();
   } catch(e) {
-    document.getElementById('stock-tbody').innerHTML =
-      '<tr><td colspan="5" class="loading-row" style="color:var(--red)">⚠️ 無法載入股票資料</td></tr>';
+    console.error('載入失敗:', e);
+    document.getElementById('market-tbody').innerHTML =
+      '<tr><td colspan="5" class="loading" style="color:var(--red)">⚠️ 無法載入股票資料：' + e.message + '</td></tr>';
   }
 }
 
-function filterStocks() {
-  const q = document.getElementById('stock-search').value.toLowerCase();
-  filtered = stocks.filter(s => {
-    const matchMarket = marketFilter === 'all' || s.market === marketFilter;
-    const matchQuery = s.symbol.toLowerCase().includes(q) || (s.name||'').toLowerCase().includes(q);
-    return matchMarket && matchQuery;
-  });
-  applySort();
-  renderStocks();
+function getFiltered() {
+  const q = (document.getElementById('search')?.value || '').toLowerCase().trim();
+  return allStocks
+    .filter(s => {
+      if (mktFilter !== 'all' && s.market !== mktFilter) return false;
+      if (q && !s.symbol.toLowerCase().includes(q) && !(s.name||'').toLowerCase().includes(q)) return false;
+      return true;
+    })
+    .sort((a, b) => {
+      const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
+      if (typeof av === 'string') return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+      return sortAsc ? av - bv : bv - av;
+    });
 }
 
-function sortBy(field) {
-  if (sortField === field) sortAsc = !sortAsc;
-  else { sortField = field; sortAsc = false; }
-  applySort();
-  renderStocks();
+function sortBy(f) {
+  if (sortField === f) sortAsc = !sortAsc; else { sortField = f; sortAsc = false; }
+  renderMarket();
 }
 
-function applySort() {
-  filtered.sort((a, b) => {
-    let av = a[sortField] ?? '', bv = b[sortField] ?? '';
-    if (typeof av === 'string') av = av.toLowerCase();
-    if (typeof bv === 'string') bv = bv.toLowerCase();
-    return sortAsc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
-  });
+function setMarket(m, btn) {
+  mktFilter = m;
+  document.querySelectorAll('.mf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarket();
 }
 
-function renderStocks() {
-  const tbody = document.getElementById('stock-tbody');
-  if (!filtered.length) {
-    tbody.innerHTML = '<tr><td colspan="5" class="loading-row">找不到符合的股票</td></tr>';
+function renderMarket() {
+  const rows = getFiltered();
+  const tbody = document.getElementById('market-tbody');
+  if (!rows.length) {
+    tbody.innerHTML = '<tr><td colspan="5" class="loading">找不到股票</td></tr>';
     return;
   }
-  tbody.innerHTML = filtered.map(s => {
+  tbody.innerHTML = rows.map(s => {
     const cls = s.change_pct > 0 ? 'up' : s.change_pct < 0 ? 'down' : 'flat';
     const sign = s.change_pct > 0 ? '+' : '';
-    const currency = s.market === 'TW' ? 'NT$' : '$';
-    return `<tr onclick="openModal('${s.symbol}')">
-      <td>
-        <div class="stock-symbol">${s.symbol}<span class="market-tag ${s.market}">${s.market}</span></div>
-        <div class="stock-name">${s.name||''}</div>
-      </td>
-      <td style="color:var(--text2);font-size:12px">${s.currency||'USD'}</td>
-      <td style="text-align:right">
-        <span class="price ${cls}">${currency}${s.price.toFixed(2)}</span>
-      </td>
-      <td style="text-align:right">
-        <span class="change-pct ${cls}">${sign}${s.change_pct.toFixed(2)}%</span><br>
-        <span style="font-size:11px;color:var(--text3)">${sign}${(s.change||0).toFixed(2)}</span>
-      </td>
+    const cur = s.market === 'TW' ? 'NT$' : '$';
+    return `<tr onclick="openModal('${esc(s.symbol)}')">
+      <td><span class="sym">${esc(s.symbol)}</span><span class="mtag ${s.market}">${s.market}</span></td>
+      <td><div class="sname">${esc(s.name||'')}</div></td>
+      <td style="text-align:right" class="mono ${cls}">${cur}${s.price.toFixed(2)}</td>
+      <td style="text-align:right"><span class="mono ${cls}">${sign}${s.change_pct.toFixed(2)}%</span></td>
       <td style="text-align:center">
-        <button class="btn btn-sm btn-buy" onclick="event.stopPropagation();openModal('${s.symbol}','buy')">買</button>
-        <button class="btn btn-sm btn-sell" onclick="event.stopPropagation();openModal('${s.symbol}','sell')" style="margin-left:4px">賣</button>
+        <button class="btn btn-sm btn-buy" onclick="event.stopPropagation();openModal('${esc(s.symbol)}','buy')">買</button>
+        <button class="btn btn-sm btn-sell" onclick="event.stopPropagation();openModal('${esc(s.symbol)}','sell')" style="margin-left:3px">賣</button>
       </td>
     </tr>`;
   }).join('');
 }
 
 // ══════════════════════════════════════
-// TRADE MODAL
+// MODAL 交易
 // ══════════════════════════════════════
-function openModal(symbol, type = 'buy') {
-  const stock = stocks.find(s => s.symbol === symbol);
-  if (!stock) return;
-  tradeSymbol = symbol;
-  tradePrice = stock.price;
-  document.getElementById('modal-symbol').textContent = symbol;
-  document.getElementById('modal-name').textContent = stock.name || '';
-  document.getElementById('modal-price').textContent = '$' + tradePrice.toFixed(2);
-  document.getElementById('trade-qty').value = 1;
-  setTradeType(type);
-  document.getElementById('trade-modal').classList.add('open');
+let mSym   = null;   // 目前選的股票代號
+let mPrice = 0;      // 鎖定的股價（開 modal 時快照）
+let mType  = 'buy';  // buy | sell
+
+function openModal(sym, type = 'buy') {
+  const s = allStocks.find(x => x.symbol === sym);
+  if (!s) { showNotif('找不到股票資料', 'error'); return; }
+  if (!s.price || isNaN(s.price) || s.price <= 0) { showNotif('此股票目前無價格資料', 'error'); return; }
+
+  mSym   = sym;
+  mPrice = s.price;   // 快照，後續計算全用這個值
+
+  const cur = s.market === 'TW' ? 'NT$' : '$';
+  document.getElementById('m-sym').textContent   = sym;
+  document.getElementById('m-name').textContent  = s.name || '';
+  document.getElementById('m-price').textContent = cur + mPrice.toFixed(2);
+  document.getElementById('qty').value = '1';
+
+  setType(type);
+  document.getElementById('overlay').classList.add('open');
 }
 
 function closeModal() {
-  document.getElementById('trade-modal').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+  mSym = null; mPrice = 0;
 }
 
-function closeModalOutside(e) {
-  if (e.target === document.getElementById('trade-modal')) closeModal();
+function overlayClick(e) {
+  if (e.target === document.getElementById('overlay')) closeModal();
 }
 
-function setTradeType(type) {
-  tradeType = type;
-  document.querySelectorAll('.trade-tab').forEach(t => t.classList.remove('active'));
-  document.querySelector('.trade-tab.' + type).classList.add('active');
-  document.getElementById('tax-row').style.display = type === 'sell' ? '' : 'none';
-  document.getElementById('sum-action').textContent = type === 'buy' ? '需支付' : '實際獲得';
-  document.getElementById('confirm-btn').textContent = type === 'buy' ? '確認買入' : '確認賣出';
-  document.getElementById('confirm-btn').className = 'btn ' + (type === 'buy' ? 'btn-buy' : 'btn-sell');
+function setType(t) {
+  mType = t;
+  document.querySelectorAll('.ttab').forEach(b => b.classList.remove('active'));
+  document.querySelector('.ttab.' + t).classList.add('active');
+  document.getElementById('tax-row').style.display   = t === 'sell' ? '' : 'none';
+  document.getElementById('s-action').textContent    = t === 'buy' ? '需支付' : '實際獲得';
+  document.getElementById('confirm-btn').textContent = t === 'buy' ? '確認買入' : '確認賣出';
+  document.getElementById('confirm-btn').className   = 'btn ' + (t === 'buy' ? 'btn-buy' : 'btn-sell');
   updateSummary();
 }
 
-function adjustQty(d) {
-  const el = document.getElementById('trade-qty');
-  el.value = Math.max(1, parseInt(el.value || 1) + d);
+function adjQty(d) {
+  const el = document.getElementById('qty');
+  el.value = String(Math.max(1, (parseInt(el.value) || 1) + d));
   updateSummary();
 }
 
-function calcFees(price, qty, type) {
-  const sub = price * qty;
-  const fee = Math.max(MIN_FEE, sub * (type === 'buy' ? BUY_FEE : SELL_FEE));
-  const tax = type === 'sell' ? sub * SELL_TAX : 0;
-  const total = type === 'buy' ? sub + fee : sub - fee - tax;
-  return { sub, fee, tax, total };
+// 核心費用計算 —— 所有數字用 toFixed 固定小數避免浮點誤差
+function calcFee(price, qty, type) {
+  const sub  = price * qty;                                               // 小計
+  const fee  = Math.max(MIN_FEE, sub * (type === 'buy' ? BUY_FEE_RATE : SELL_FEE_RATE));
+  const tax  = type === 'sell' ? sub * SELL_TAX_RATE : 0;
+  // 買入：需支付 = 小計 + 手續費
+  // 賣出：實際獲得 = 小計 - 手續費 - 證交稅
+  const net  = type === 'buy' ? sub + fee : sub - fee - tax;
+  return {
+    sub: round2(sub),
+    fee: round2(fee),
+    tax: round2(tax),
+    net: round2(net),   // 最終金額
+  };
 }
+
+function round2(n) { return Math.round(n * 100) / 100; }
 
 function updateSummary() {
-  const qty = parseInt(document.getElementById('trade-qty').value) || 1;
-  const { sub, fee, tax, total } = calcFees(tradePrice, qty, tradeType);
-  document.getElementById('sum-qty').textContent = qty + ' 股';
-  document.getElementById('sum-price').textContent = '$' + tradePrice.toFixed(2);
-  document.getElementById('sum-sub').textContent = '$' + sub.toFixed(2);
-  document.getElementById('sum-fee').textContent = '$' + fee.toFixed(2);
-  document.getElementById('sum-tax').textContent = '$' + tax.toFixed(2);
-  document.getElementById('sum-total').textContent = '$' + total.toFixed(2);
-  const after = tradeType === 'buy' ? state.coins - total : state.coins + total;
-  document.getElementById('sum-after').textContent =
-    `現金: $${state.coins.toFixed(2)} → 交易後: $${after.toFixed(2)}`;
+  if (!mPrice) return;
+  const qty = parseInt(document.getElementById('qty').value) || 1;
+  const { sub, fee, tax, net } = calcFee(mPrice, qty, mType);
+  const cur = (allStocks.find(s=>s.symbol===mSym)||{}).market === 'TW' ? 'NT$' : '$';
+
+  document.getElementById('s-qty').textContent   = qty + ' 股';
+  document.getElementById('s-price').textContent = cur + mPrice.toFixed(2);
+  document.getElementById('s-sub').textContent   = cur + sub.toFixed(2);
+  document.getElementById('s-fee').textContent   = cur + fee.toFixed(2);
+  document.getElementById('s-tax').textContent   = cur + tax.toFixed(2);
+  document.getElementById('s-total').textContent = cur + net.toFixed(2);
+
+  const afterCoins = mType === 'buy'
+    ? round2(G.coins - net)
+    : round2(G.coins + net);
+  document.getElementById('s-after').textContent =
+    `現金 ${cur}${G.coins.toFixed(2)} → 交易後 ${cur}${afterCoins.toFixed(2)}`;
 }
 
-function confirmTrade() {
-  const qty = parseInt(document.getElementById('trade-qty').value) || 0;
-  if (qty <= 0) { showNotif('請輸入有效數量', 'error'); return; }
+function doTrade() {
+  if (!mSym || !mPrice) return;
+  const qty = parseInt(document.getElementById('qty').value) || 0;
+  if (qty <= 0) { showNotif('請輸入有效股數', 'error'); return; }
 
-  const stock = stocks.find(s => s.symbol === tradeSymbol);
-  if (!stock) { showNotif('找不到股票資料', 'error'); return; }
+  const { sub, fee, tax, net } = calcFee(mPrice, qty, mType);
+  const stock = allStocks.find(s => s.symbol === mSym);
 
-  // 使用開啟 modal 時鎖定的價格，避免重新抓取造成計算錯誤
-  const price = tradePrice;
-  if (!price || isNaN(price) || price <= 0) { showNotif('股價資料異常', 'error'); return; }
+  if (mType === 'buy') {
+    // 檢查餘額
+    if (G.coins < net) { showNotif('餘額不足！', 'error'); return; }
 
-  const { sub, fee, tax, total } = calcFees(price, qty, tradeType);
-  if (isNaN(total) || total <= 0) { showNotif('計算異常，請重試', 'error'); return; }
+    // 扣款
+    G.coins = round2(G.coins - net);
 
-  const portfolio = state.portfolio;
-  const holding = portfolio[tradeSymbol] || { qty: 0, avgCost: 0 };
+    // 更新持股
+    const h = G.portfolio[mSym] || { qty: 0, avgCost: 0, name: stock?.name || mSym, market: stock?.market || 'US', currency: stock?.currency || 'USD' };
+    const newQty     = h.qty + qty;
+    const newAvgCost = round2((h.avgCost * h.qty + sub) / newQty);
+    G.portfolio[mSym] = { ...h, qty: newQty, avgCost: newAvgCost };
 
-  if (tradeType === 'buy') {
-    if (state.coins < total) { showNotif('餘額不足！', 'error'); return; }
-    state.coins = parseFloat((state.coins - total).toFixed(2));
-    const newQty = holding.qty + qty;
-    portfolio[tradeSymbol] = {
-      qty: newQty,
-      avgCost: parseFloat(((holding.avgCost * holding.qty + sub) / newQty).toFixed(4)),
-      name: stock.name || tradeSymbol,
-      market: stock.market || 'US',
-      currency: stock.currency || 'USD'
-    };
+    showNotif(`✅ 買入 ${qty} 股 ${mSym}，支付 ${net.toFixed(2)}`, 'success');
+
   } else {
-    if (holding.qty < qty) { showNotif('持股不足！', 'error'); return; }
-    state.coins = parseFloat((state.coins + total).toFixed(2));
-    const newQty = holding.qty - qty;
-    if (newQty === 0) delete portfolio[tradeSymbol];
-    else portfolio[tradeSymbol] = { ...holding, qty: newQty };
+    const h = G.portfolio[mSym];
+    if (!h || h.qty < qty) { showNotif('持股不足！', 'error'); return; }
+
+    // 加錢
+    G.coins = round2(G.coins + net);
+
+    // 更新持股
+    const newQty = h.qty - qty;
+    if (newQty === 0) delete G.portfolio[mSym];
+    else G.portfolio[mSym] = { ...h, qty: newQty };
+
+    showNotif(`✅ 賣出 ${qty} 股 ${mSym}，獲得 ${net.toFixed(2)}`, 'success');
   }
 
-  state.history.unshift({
-    type: tradeType,
-    symbol: tradeSymbol,
-    qty, price,
-    fee: parseFloat(fee.toFixed(2)),
-    tax: parseFloat(tax.toFixed(2)),
-    total: parseFloat(total.toFixed(2)),
-    time: Date.now()
-  });
+  // 記錄交易
+  G.history.unshift({ type: mType, symbol: mSym, qty, price: mPrice, fee, tax, net, time: Date.now() });
+  if (G.history.length > 200) G.history = G.history.slice(0, 200);
 
-  save();
-  updateCoins();
+  saveState();
+  updateCoinsDisplay();
   renderPortfolio();
   renderHistory();
   closeModal();
-  showNotif((tradeType === 'buy' ? '✅ 買入 ' : '✅ 賣出 ') + qty + ' 股 ' + tradeSymbol, 'success');
 }
 
 // ══════════════════════════════════════
-// PORTFOLIO
+// 持股
 // ══════════════════════════════════════
 function renderPortfolio() {
+  const keys = Object.keys(G.portfolio);
   const tbody = document.getElementById('port-tbody');
-  const portfolio = state.portfolio;
-  const keys = Object.keys(portfolio);
 
-  let stockValue = 0, totalCost = 0;
-  const rows = keys.map(sym => {
-    const h = portfolio[sym];
-    const s = stocks.find(x => x.symbol === sym);
-    const cur = s ? s.price : h.avgCost;
-    const mv = cur * h.qty;
-    const cost = h.avgCost * h.qty;
-    const pnl = mv - cost;
-    const pct = cost ? pnl / cost * 100 : 0;
-    stockValue += mv; totalCost += cost;
-    const cls = pnl >= 0 ? 'up' : 'down';
+  let stockVal = 0, totalCost = 0;
+  const rows = [];
+
+  for (const sym of keys) {
+    const h = G.portfolio[sym];
+    const s = allStocks.find(x => x.symbol === sym);
+    const curPrice = (s && s.price > 0) ? s.price : h.avgCost;
+    const mv   = round2(curPrice * h.qty);
+    const cost = round2(h.avgCost * h.qty);
+    const pnl  = round2(mv - cost);
+    const pct  = cost > 0 ? round2(pnl / cost * 100) : 0;
+    stockVal  += mv;
+    totalCost += cost;
+    const cls  = pnl > 0 ? 'up' : pnl < 0 ? 'down' : 'flat';
     const sign = pnl >= 0 ? '+' : '';
-    return `<tr onclick="openModal('${sym}')">
-      <td><span class="stock-symbol">${sym}</span><br><span style="font-size:11px;color:var(--text2)">${h.name||''}</span></td>
-      <td style="font-family:var(--mono)">${h.qty}</td>
-      <td style="text-align:right;font-family:var(--mono);font-size:12px">$${h.avgCost.toFixed(2)}</td>
-      <td style="text-align:right;font-family:var(--mono);font-size:12px">$${cur.toFixed(2)}</td>
-      <td style="text-align:right">
-        <span class="${cls}" style="font-family:var(--mono);font-size:12px">${sign}$${pnl.toFixed(2)}</span><br>
-        <span class="${cls}" style="font-size:11px">${sign}${pct.toFixed(2)}%</span>
-      </td>
-      <td><button class="btn btn-sm btn-sell" onclick="event.stopPropagation();openModal('${sym}','sell')">賣出</button></td>
-    </tr>`;
-  });
+    const cur  = (h.market || 'US') === 'TW' ? 'NT$' : '$';
+    rows.push(`<tr onclick="openModal('${esc(sym)}')">
+      <td><span class="sym">${esc(sym)}</span><span class="mtag ${h.market||'US'}">${h.market||'US'}</span><br><span class="sname">${esc(h.name||'')}</span></td>
+      <td class="mono">${h.qty}</td>
+      <td class="mono" style="text-align:right">${cur}${h.avgCost.toFixed(2)}</td>
+      <td class="mono" style="text-align:right">${cur}${curPrice.toFixed(2)}</td>
+      <td style="text-align:right"><span class="mono ${cls}">${sign}${cur}${Math.abs(pnl).toFixed(2)}</span><br><span class="${cls}" style="font-size:10px">${sign}${pct.toFixed(2)}%</span></td>
+      <td><button class="btn btn-sm btn-sell" onclick="event.stopPropagation();openModal('${esc(sym)}','sell')">賣出</button></td>
+    </tr>`);
+  }
 
-  tbody.innerHTML = rows.length ? rows.join('') :
-    '<tr><td colspan="6" class="empty-state">尚無持股，前往市場買入吧！</td></tr>';
+  tbody.innerHTML = rows.length ? rows.join('') : '<tr><td colspan="6" class="empty">尚無持股，前往市場買入吧！</td></tr>';
 
-  const total = state.coins + stockValue;
-  const pnl = stockValue - totalCost;
-  document.getElementById('stat-cash').textContent = '$' + state.coins.toFixed(2);
-  document.getElementById('stat-sv').textContent = '$' + stockValue.toFixed(2);
-  document.getElementById('stat-total').textContent = '$' + total.toFixed(2);
-  const pnlEl = document.getElementById('stat-pnl');
-  pnlEl.textContent = (pnl >= 0 ? '+' : '') + '$' + pnl.toFixed(2);
-  pnlEl.className = 'stat-value ' + (pnl >= 0 ? 'up' : 'down');
+  const total   = round2(G.coins + stockVal);
+  const totPnl  = round2(stockVal - totalCost);
+  document.getElementById('s-cash').textContent  = '$' + G.coins.toFixed(2);
+  document.getElementById('s-sv').textContent    = '$' + stockVal.toFixed(2);
+  document.getElementById('s-total').textContent = '$' + total.toFixed(2);
+  const pnlEl = document.getElementById('s-pnl');
+  pnlEl.textContent = (totPnl >= 0 ? '+' : '') + '$' + totPnl.toFixed(2);
+  pnlEl.className = 'stat-val ' + (totPnl >= 0 ? 'up' : 'down');
 }
 
 // ══════════════════════════════════════
-// HISTORY
+// 交易記錄
 // ══════════════════════════════════════
 function renderHistory() {
   const tbody = document.getElementById('hist-tbody');
-  if (!state.history.length) {
-    tbody.innerHTML = '<tr><td colspan="7" class="empty-state">尚無交易記錄</td></tr>';
+  if (!G.history.length) {
+    tbody.innerHTML = '<tr><td colspan="7" class="empty">尚無記錄</td></tr>';
     return;
   }
-  tbody.innerHTML = state.history.slice(0, 100).map(t => {
-    const dt = new Date(t.time).toLocaleString('zh-TW', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+  tbody.innerHTML = G.history.slice(0, 100).map(t => {
+    const dt   = new Date(t.time).toLocaleString('zh-TW', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
     const isBuy = t.type === 'buy';
+    const cur  = (allStocks.find(s=>s.symbol===t.symbol)||{}).market === 'TW' ? 'NT$' : '$';
     return `<tr>
       <td style="color:var(--text2)">${dt}</td>
-      <td class="stock-symbol">${t.symbol}</td>
+      <td class="sym">${esc(t.symbol)}</td>
       <td style="color:${isBuy?'var(--green)':'var(--red)'};font-weight:600">${isBuy?'買入':'賣出'}</td>
-      <td style="text-align:right;font-family:var(--mono)">${t.qty}</td>
-      <td style="text-align:right;font-family:var(--mono)">$${t.price.toFixed(2)}</td>
-      <td style="text-align:right;font-family:var(--mono);color:var(--text3)">$${t.fee.toFixed(2)}</td>
-      <td style="text-align:right;font-family:var(--mono);color:${isBuy?'var(--red)':'var(--green)'}">
-        ${isBuy?'-':'+'}$${t.total.toFixed(2)}
+      <td class="mono" style="text-align:right">${t.qty}</td>
+      <td class="mono" style="text-align:right">${cur}${Number(t.price).toFixed(2)}</td>
+      <td class="mono" style="text-align:right;color:var(--text3)">${cur}${Number(t.fee).toFixed(2)}</td>
+      <td class="mono" style="text-align:right;color:${isBuy?'var(--red)':'var(--green)'}">
+        ${isBuy?'-':'+'}${cur}${Number(t.net).toFixed(2)}
       </td>
     </tr>`;
   }).join('');
 }
 
 function clearHistory() {
-  if (!confirm('確定要清除所有交易記錄嗎？')) return;
-  state.history = [];
-  save();
+  if (!confirm('確定要清除所有交易記錄？')) return;
+  G.history = [];
+  saveState();
   renderHistory();
 }
 
 // ══════════════════════════════════════
-// HOURLY BONUS + TIMER
+// 每小時獎勵
 // ══════════════════════════════════════
 function tick() {
-  // Update timer display
-  const next = state.lastBonusAt + 3600000;
-  const rem = Math.max(0, next - Date.now());
-  const h = Math.floor(rem / 3600000);
-  const m = Math.floor((rem % 3600000) / 60000);
-  const s = Math.floor((rem % 60000) / 1000);
-  document.getElementById('bonus-timer').textContent =
-    pad(h) + ':' + pad(m) + ':' + pad(s);
+  // 倒數計時
+  const next = G.lastBonus + 3600000;
+  const rem  = Math.max(0, next - Date.now());
+  const hh   = Math.floor(rem / 3600000);
+  const mm   = Math.floor((rem % 3600000) / 60000);
+  const ss   = Math.floor((rem % 60000) / 1000);
+  document.getElementById('timer').textContent = pad(hh)+':'+pad(mm)+':'+pad(ss);
 
-  // Check if bonus due — pay out all missed hours at once
-  const hoursElapsed = Math.floor((Date.now() - state.lastBonusAt) / 3600000);
-  if (hoursElapsed >= 1) {
-    const bonus = hoursElapsed * HOURLY_BONUS;
-    state.coins += bonus;
-    state.lastBonusAt += hoursElapsed * 3600000;
-    save();
-    updateCoins();
-    const msg = hoursElapsed === 1
-      ? '🎉 獲得每小時獎勵 +$' + bonus + '！'
-      : '🎉 離線 ' + hoursElapsed + ' 小時，補發 +$' + bonus + '！';
-    showNotif(msg, 'info');
+  // 補發所有未領小時
+  const hrs = Math.floor((Date.now() - G.lastBonus) / 3600000);
+  if (hrs >= 1) {
+    const bonus = hrs * HOURLY_BONUS;
+    G.coins = round2(G.coins + bonus);
+    G.lastBonus += hrs * 3600000;
+    saveState();
+    updateCoinsDisplay();
+    showNotif(hrs === 1 ? `🎉 獲得每小時獎勵 +$${HOURLY_BONUS}！` : `🎉 離線 ${hrs} 小時，補發 +$${bonus}！`, 'info');
   }
 }
 
-function pad(n) { return String(n).padStart(2, '0'); }
+function pad(n) { return String(n).padStart(2,'0'); }
 
 // ══════════════════════════════════════
-// UI HELPERS
+// UI
 // ══════════════════════════════════════
-function updateCoins() {
+function updateCoinsDisplay() {
   document.getElementById('coins-display').textContent =
-    '💰 $' + state.coins.toLocaleString('zh-TW', {minimumFractionDigits:2, maximumFractionDigits:2});
+    '💰 $' + G.coins.toLocaleString('zh-TW', {minimumFractionDigits:2, maximumFractionDigits:2});
 }
 
 function switchTab(tab, btn) {
@@ -955,29 +653,44 @@ function switchTab(tab, btn) {
   btn.classList.add('active');
   document.getElementById('tab-' + tab).classList.add('active');
   if (tab === 'portfolio') renderPortfolio();
-  if (tab === 'history') renderHistory();
+  if (tab === 'history')   renderHistory();
 }
 
-let notifTimer;
-function showNotif(text, type = 'info') {
+let notifT;
+function showNotif(txt, type='info') {
   const el = document.getElementById('notif');
-  el.textContent = text;
+  el.textContent = txt;
   el.className = 'notif ' + type;
   el.style.display = 'block';
-  clearTimeout(notifTimer);
-  notifTimer = setTimeout(() => el.style.display = 'none', 4000);
+  clearTimeout(notifT);
+  notifT = setTimeout(() => el.style.display = 'none', 4000);
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 function confirmReset() {
-  if (!confirm('確定要重置遊戲嗎？所有資料（金幣、持股、記錄）將清除！')) return;
-  localStorage.removeItem('stockgame');
-  state = initSave();
-  save();
-  updateCoins();
+  if (!confirm('確定要重置遊戲？所有金幣、持股、記錄將清除！')) return;
+  localStorage.removeItem('sgame2');
+  G = newState();
+  saveState();
+  updateCoinsDisplay();
   renderPortfolio();
   renderHistory();
-  showNotif('遊戲已重置，初始金幣 $' + INITIAL_COINS, 'info');
+  showNotif('遊戲已重置，初始金幣 $' + INIT_COINS, 'info');
 }
+
+// ══════════════════════════════════════
+// 啟動
+// ══════════════════════════════════════
+updateCoinsDisplay();
+renderPortfolio();
+renderHistory();
+loadStocks();
+setInterval(loadStocks, 5 * 60 * 1000);
+setInterval(tick, 1000);
+tick();
 </script>
 </body>
 </html>
