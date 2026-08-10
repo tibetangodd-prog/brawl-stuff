@@ -3,1058 +3,1058 @@
     {
       "symbol": "AAPL",
       "name": "Apple Inc.",
-      "price": 306.85,
+      "price": 307.3,
       "prev_close": 313.25,
-      "change": -6.4,
-      "change_pct": -2.04,
+      "change": -5.95,
+      "change_pct": -1.9,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:32.487894Z"
+      "updated_at": "2026-08-10T19:42:22.132862Z"
     },
     {
       "symbol": "MSFT",
       "name": "Microsoft Corporation",
-      "price": 505.52,
+      "price": 505.05,
       "prev_close": 499.45,
-      "change": 6.07,
-      "change_pct": 1.22,
+      "change": 5.6,
+      "change_pct": 1.12,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:33.153027Z"
+      "updated_at": "2026-08-10T19:42:22.509319Z"
     },
     {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 218.48,
+      "price": 218.85,
       "prev_close": 223.76,
-      "change": -5.28,
-      "change_pct": -2.36,
+      "change": -4.91,
+      "change_pct": -2.19,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:33.697761Z"
+      "updated_at": "2026-08-10T19:42:22.902916Z"
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
-      "price": 354.45,
+      "price": 355.44,
       "prev_close": 354.75,
-      "change": -0.3,
-      "change_pct": -0.08,
+      "change": 0.69,
+      "change_pct": 0.19,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:34.204476Z"
+      "updated_at": "2026-08-10T19:42:23.240723Z"
     },
     {
       "symbol": "AMZN",
       "name": "Amazon.com, Inc.",
-      "price": 276.51,
+      "price": 277.41,
       "prev_close": 274.31,
-      "change": 2.2,
-      "change_pct": 0.8,
+      "change": 3.1,
+      "change_pct": 1.13,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:34.745394Z"
+      "updated_at": "2026-08-10T19:42:23.754120Z"
     },
     {
       "symbol": "META",
       "name": "Meta Platforms, Inc.",
-      "price": 593.54,
+      "price": 593.36,
       "prev_close": 591.8,
-      "change": 1.74,
-      "change_pct": 0.29,
+      "change": 1.56,
+      "change_pct": 0.26,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:35.326216Z"
+      "updated_at": "2026-08-10T19:42:24.148873Z"
     },
     {
       "symbol": "TSLA",
       "name": "Tesla, Inc.",
-      "price": 328.43,
+      "price": 329.67,
       "prev_close": 329.0,
-      "change": -0.57,
-      "change_pct": -0.17,
+      "change": 0.67,
+      "change_pct": 0.2,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:35.811603Z"
+      "updated_at": "2026-08-10T19:42:24.513758Z"
     },
     {
       "symbol": "AVGO",
       "name": "Broadcom Inc.",
-      "price": 424.41,
+      "price": 423.87,
       "prev_close": 426.65,
-      "change": -2.24,
-      "change_pct": -0.53,
+      "change": -2.78,
+      "change_pct": -0.65,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:36.538576Z"
+      "updated_at": "2026-08-10T19:42:25.059039Z"
     },
     {
       "symbol": "ORCL",
       "name": "Oracle Corporation",
-      "price": 150.6,
+      "price": 151.7,
       "prev_close": 146.75,
-      "change": 3.85,
-      "change_pct": 2.62,
+      "change": 4.95,
+      "change_pct": 3.37,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:37.166020Z"
+      "updated_at": "2026-08-10T19:42:25.514215Z"
     },
     {
       "symbol": "NFLX",
       "name": "Netflix, Inc.",
-      "price": 75.49,
+      "price": 75.66,
       "prev_close": 74.18,
-      "change": 1.31,
-      "change_pct": 1.77,
+      "change": 1.48,
+      "change_pct": 2.0,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:37.702111Z"
+      "updated_at": "2026-08-10T19:42:25.926650Z"
     },
     {
       "symbol": "AMD",
       "name": "Advanced Micro Devices, Inc.",
-      "price": 476.11,
+      "price": 473.8,
       "prev_close": 483.18,
-      "change": -7.07,
-      "change_pct": -1.46,
+      "change": -9.38,
+      "change_pct": -1.94,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:38.225679Z"
+      "updated_at": "2026-08-10T19:42:26.233269Z"
     },
     {
       "symbol": "ADBE",
       "name": "Adobe Inc.",
-      "price": 272.15,
+      "price": 272.6,
       "prev_close": 265.0,
-      "change": 7.15,
-      "change_pct": 2.7,
+      "change": 7.6,
+      "change_pct": 2.87,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:38.828480Z"
+      "updated_at": "2026-08-10T19:42:26.623971Z"
     },
     {
       "symbol": "CRM",
       "name": "Salesforce, Inc.",
-      "price": 197.15,
+      "price": 197.51,
       "prev_close": 191.9,
-      "change": 5.25,
-      "change_pct": 2.74,
+      "change": 5.61,
+      "change_pct": 2.92,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:39.304300Z"
+      "updated_at": "2026-08-10T19:42:27.027768Z"
     },
     {
       "symbol": "INTC",
       "name": "Intel Corporation",
-      "price": 98.65,
+      "price": 99.14,
       "prev_close": 101.68,
-      "change": -3.03,
-      "change_pct": -2.98,
+      "change": -2.54,
+      "change_pct": -2.5,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:39.896857Z"
+      "updated_at": "2026-08-10T19:42:27.582467Z"
     },
     {
       "symbol": "QCOM",
       "name": "QUALCOMM Incorporated",
-      "price": 164.14,
+      "price": 163.63,
       "prev_close": 168.25,
-      "change": -4.11,
-      "change_pct": -2.44,
+      "change": -4.62,
+      "change_pct": -2.75,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:40.460461Z"
+      "updated_at": "2026-08-10T19:42:28.037484Z"
     },
     {
       "symbol": "TXN",
       "name": "Texas Instruments Incorporated",
-      "price": 282.75,
+      "price": 282.64,
       "prev_close": 286.66,
-      "change": -3.91,
-      "change_pct": -1.36,
+      "change": -4.02,
+      "change_pct": -1.4,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:41.097838Z"
+      "updated_at": "2026-08-10T19:42:28.584800Z"
     },
     {
       "symbol": "AMAT",
       "name": "Applied Materials, Inc.",
-      "price": 528.55,
+      "price": 527.19,
       "prev_close": 541.99,
-      "change": -13.44,
-      "change_pct": -2.48,
+      "change": -14.8,
+      "change_pct": -2.73,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:41.618376Z"
+      "updated_at": "2026-08-10T19:42:28.979603Z"
     },
     {
       "symbol": "MU",
       "name": "Micron Technology, Inc.",
-      "price": 880.43,
+      "price": 874.22,
       "prev_close": 880.0,
-      "change": 0.43,
-      "change_pct": 0.05,
+      "change": -5.78,
+      "change_pct": -0.66,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:42.235380Z"
+      "updated_at": "2026-08-10T19:42:29.417101Z"
     },
     {
       "symbol": "KLAC",
       "name": "KLA Corporation",
-      "price": 193.59,
+      "price": 193.95,
       "prev_close": 198.92,
-      "change": -5.33,
-      "change_pct": -2.68,
+      "change": -4.97,
+      "change_pct": -2.5,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:42.885458Z"
+      "updated_at": "2026-08-10T19:42:29.816645Z"
     },
     {
       "symbol": "LRCX",
       "name": "Lam Research Corporation",
-      "price": 307.64,
+      "price": 308.1,
       "prev_close": 311.52,
-      "change": -3.88,
-      "change_pct": -1.25,
+      "change": -3.42,
+      "change_pct": -1.1,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:43.396886Z"
+      "updated_at": "2026-08-10T19:42:30.286439Z"
     },
     {
       "symbol": "BRK-B",
       "name": "Berkshire Hathaway Inc.",
-      "price": 529.26,
+      "price": 527.2,
       "prev_close": 520.76,
-      "change": 8.5,
-      "change_pct": 1.63,
+      "change": 6.44,
+      "change_pct": 1.24,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:45.058663Z"
+      "updated_at": "2026-08-10T19:42:32.008940Z"
     },
     {
       "symbol": "JPM",
       "name": "JPMorgan Chase & Co.",
-      "price": 357.68,
+      "price": 358.65,
       "prev_close": 358.21,
-      "change": -0.53,
-      "change_pct": -0.15,
+      "change": 0.44,
+      "change_pct": 0.12,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:45.822686Z"
+      "updated_at": "2026-08-10T19:42:32.719201Z"
     },
     {
       "symbol": "V",
       "name": "Visa Inc.",
-      "price": 359.36,
+      "price": 359.41,
       "prev_close": 362.79,
-      "change": -3.43,
-      "change_pct": -0.95,
+      "change": -3.38,
+      "change_pct": -0.93,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:46.481953Z"
+      "updated_at": "2026-08-10T19:42:33.169583Z"
     },
     {
       "symbol": "MA",
       "name": "Mastercard Incorporated",
-      "price": 559.91,
+      "price": 559.85,
       "prev_close": 563.05,
-      "change": -3.14,
-      "change_pct": -0.56,
+      "change": -3.2,
+      "change_pct": -0.57,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:47.127417Z"
+      "updated_at": "2026-08-10T19:42:33.711559Z"
     },
     {
       "symbol": "BAC",
       "name": "Bank of America Corporation",
-      "price": 63.71,
+      "price": 63.78,
       "prev_close": 63.3,
-      "change": 0.41,
-      "change_pct": 0.65,
+      "change": 0.48,
+      "change_pct": 0.76,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:47.705209Z"
+      "updated_at": "2026-08-10T19:42:34.111439Z"
     },
     {
       "symbol": "GS",
       "name": "The Goldman Sachs Group, Inc.",
-      "price": 1031.5,
+      "price": 1033.91,
       "prev_close": 1042.0,
-      "change": -10.5,
-      "change_pct": -1.01,
+      "change": -8.09,
+      "change_pct": -0.78,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:48.317637Z"
+      "updated_at": "2026-08-10T19:42:34.725107Z"
     },
     {
       "symbol": "MS",
       "name": "Morgan Stanley",
-      "price": 214.93,
+      "price": 215.25,
       "prev_close": 215.82,
-      "change": -0.89,
-      "change_pct": -0.41,
+      "change": -0.57,
+      "change_pct": -0.26,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:48.940581Z"
+      "updated_at": "2026-08-10T19:42:35.297641Z"
     },
     {
       "symbol": "WFC",
       "name": "Wells Fargo & Company",
-      "price": 87.6,
+      "price": 87.62,
       "prev_close": 87.4,
-      "change": 0.2,
-      "change_pct": 0.23,
+      "change": 0.22,
+      "change_pct": 0.25,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:49.608887Z"
+      "updated_at": "2026-08-10T19:42:35.763842Z"
     },
     {
       "symbol": "AXP",
       "name": "American Express Company",
-      "price": 337.64,
+      "price": 337.88,
       "prev_close": 341.63,
-      "change": -3.99,
-      "change_pct": -1.17,
+      "change": -3.75,
+      "change_pct": -1.1,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:50.354706Z"
+      "updated_at": "2026-08-10T19:42:36.267889Z"
     },
     {
       "symbol": "BLK",
       "name": "BlackRock, Inc.",
-      "price": 1126.38,
+      "price": 1129.34,
       "prev_close": 1133.43,
-      "change": -7.05,
-      "change_pct": -0.62,
+      "change": -4.09,
+      "change_pct": -0.36,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:50.911466Z"
+      "updated_at": "2026-08-10T19:42:36.832329Z"
     },
     {
       "symbol": "SCHW",
       "name": "The Charles Schwab Corporation",
-      "price": 108.28,
+      "price": 108.08,
       "prev_close": 107.54,
-      "change": 0.74,
-      "change_pct": 0.69,
+      "change": 0.54,
+      "change_pct": 0.5,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:51.627277Z"
+      "updated_at": "2026-08-10T19:42:37.305025Z"
     },
     {
       "symbol": "C",
       "name": "Citigroup Inc.",
-      "price": 135.45,
+      "price": 135.4,
       "prev_close": 135.16,
-      "change": 0.29,
-      "change_pct": 0.21,
+      "change": 0.24,
+      "change_pct": 0.18,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:52.492398Z"
+      "updated_at": "2026-08-10T19:42:37.817859Z"
     },
     {
       "symbol": "SPGI",
       "name": "S&P Global Inc.",
-      "price": 411.02,
+      "price": 410.38,
       "prev_close": 407.0,
-      "change": 4.02,
-      "change_pct": 0.99,
-      "currency": "USD",
-      "market": "US",
-      "updated_at": "2026-08-10T18:34:53.392189Z"
-    },
-    {
-      "symbol": "MCO",
-      "name": "Moody's Corporation",
-      "price": 478.35,
-      "prev_close": 479.44,
-      "change": -1.09,
-      "change_pct": -0.23,
-      "currency": "USD",
-      "market": "US",
-      "updated_at": "2026-08-10T18:34:54.737529Z"
-    },
-    {
-      "symbol": "COF",
-      "name": "Capital One Financial Corporation",
-      "price": 218.2,
-      "prev_close": 217.43,
-      "change": 0.77,
-      "change_pct": 0.35,
-      "currency": "USD",
-      "market": "US",
-      "updated_at": "2026-08-10T18:34:55.340742Z"
-    },
-    {
-      "symbol": "LLY",
-      "name": "Eli Lilly and Company",
-      "price": 1221.16,
-      "prev_close": 1185.85,
-      "change": 35.31,
-      "change_pct": 2.98,
-      "currency": "USD",
-      "market": "US",
-      "updated_at": "2026-08-10T18:34:56.011100Z"
-    },
-    {
-      "symbol": "UNH",
-      "name": "UnitedHealth Group Incorporated",
-      "price": 410.19,
-      "prev_close": 406.81,
       "change": 3.38,
       "change_pct": 0.83,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:56.610262Z"
+      "updated_at": "2026-08-10T19:42:38.268710Z"
+    },
+    {
+      "symbol": "MCO",
+      "name": "Moody's Corporation",
+      "price": 478.81,
+      "prev_close": 479.44,
+      "change": -0.63,
+      "change_pct": -0.13,
+      "currency": "USD",
+      "market": "US",
+      "updated_at": "2026-08-10T19:42:38.738946Z"
+    },
+    {
+      "symbol": "COF",
+      "name": "Capital One Financial Corporation",
+      "price": 218.47,
+      "prev_close": 217.43,
+      "change": 1.04,
+      "change_pct": 0.48,
+      "currency": "USD",
+      "market": "US",
+      "updated_at": "2026-08-10T19:42:39.338902Z"
+    },
+    {
+      "symbol": "LLY",
+      "name": "Eli Lilly and Company",
+      "price": 1226.85,
+      "prev_close": 1185.85,
+      "change": 41.0,
+      "change_pct": 3.46,
+      "currency": "USD",
+      "market": "US",
+      "updated_at": "2026-08-10T19:42:40.037560Z"
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "price": 408.6,
+      "prev_close": 406.81,
+      "change": 1.79,
+      "change_pct": 0.44,
+      "currency": "USD",
+      "market": "US",
+      "updated_at": "2026-08-10T19:42:40.894249Z"
     },
     {
       "symbol": "JNJ",
       "name": "Johnson & Johnson",
-      "price": 259.46,
+      "price": 260.37,
       "prev_close": 259.87,
-      "change": -0.41,
-      "change_pct": -0.16,
+      "change": 0.5,
+      "change_pct": 0.19,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:57.496357Z"
+      "updated_at": "2026-08-10T19:42:41.482860Z"
     },
     {
       "symbol": "ABBV",
       "name": "AbbVie Inc.",
-      "price": 245.52,
+      "price": 247.12,
       "prev_close": 245.6,
-      "change": -0.08,
-      "change_pct": -0.03,
+      "change": 1.52,
+      "change_pct": 0.62,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:58.075375Z"
+      "updated_at": "2026-08-10T19:42:41.963065Z"
     },
     {
       "symbol": "MRK",
       "name": "Merck & Co., Inc.",
-      "price": 130.51,
+      "price": 130.56,
       "prev_close": 128.85,
-      "change": 1.66,
-      "change_pct": 1.29,
+      "change": 1.71,
+      "change_pct": 1.33,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:34:58.776812Z"
+      "updated_at": "2026-08-10T19:42:42.500501Z"
     },
     {
       "symbol": "TMO",
       "name": "Thermo Fisher Scientific Inc.",
-      "price": 595.49,
+      "price": 598.4,
       "prev_close": 592.79,
-      "change": 2.7,
-      "change_pct": 0.46,
+      "change": 5.61,
+      "change_pct": 0.95,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:00.390490Z"
+      "updated_at": "2026-08-10T19:42:43.894150Z"
     },
     {
       "symbol": "ABT",
       "name": "Abbott Laboratories",
-      "price": 108.76,
+      "price": 108.36,
       "prev_close": 107.66,
-      "change": 1.1,
-      "change_pct": 1.02,
+      "change": 0.7,
+      "change_pct": 0.65,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:01.188961Z"
+      "updated_at": "2026-08-10T19:42:44.305225Z"
     },
     {
       "symbol": "DHR",
       "name": "Danaher Corporation",
-      "price": 205.75,
+      "price": 208.43,
       "prev_close": 204.19,
-      "change": 1.56,
-      "change_pct": 0.76,
+      "change": 4.24,
+      "change_pct": 2.08,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:01.715928Z"
+      "updated_at": "2026-08-10T19:42:44.744711Z"
     },
     {
       "symbol": "AMGN",
       "name": "Amgen Inc.",
-      "price": 413.64,
+      "price": 414.85,
       "prev_close": 409.47,
-      "change": 4.17,
-      "change_pct": 1.02,
+      "change": 5.38,
+      "change_pct": 1.31,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:02.345286Z"
+      "updated_at": "2026-08-10T19:42:45.245923Z"
     },
     {
       "symbol": "ISRG",
       "name": "Intuitive Surgical, Inc.",
-      "price": 390.27,
+      "price": 390.9,
       "prev_close": 378.94,
-      "change": 11.33,
-      "change_pct": 2.99,
+      "change": 11.96,
+      "change_pct": 3.16,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:02.804198Z"
+      "updated_at": "2026-08-10T19:42:45.687268Z"
     },
     {
       "symbol": "GILD",
       "name": "Gilead Sciences, Inc.",
-      "price": 132.89,
+      "price": 132.77,
       "prev_close": 133.22,
-      "change": -0.33,
-      "change_pct": -0.25,
+      "change": -0.45,
+      "change_pct": -0.34,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:03.361660Z"
+      "updated_at": "2026-08-10T19:42:46.041645Z"
     },
     {
       "symbol": "VRTX",
       "name": "Vertex Pharmaceuticals Incorporated",
-      "price": 526.9,
+      "price": 521.24,
       "prev_close": 495.32,
-      "change": 31.58,
-      "change_pct": 6.38,
+      "change": 25.92,
+      "change_pct": 5.23,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:03.940874Z"
+      "updated_at": "2026-08-10T19:42:46.363039Z"
     },
     {
       "symbol": "REGN",
       "name": "Regeneron Pharmaceuticals, Inc.",
-      "price": 804.14,
+      "price": 805.84,
       "prev_close": 782.0,
-      "change": 22.14,
-      "change_pct": 2.83,
+      "change": 23.84,
+      "change_pct": 3.05,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:04.403812Z"
+      "updated_at": "2026-08-10T19:42:46.737427Z"
     },
     {
       "symbol": "BSX",
       "name": "Boston Scientific Corporation",
-      "price": 50.67,
+      "price": 50.56,
       "prev_close": 49.46,
-      "change": 1.21,
-      "change_pct": 2.45,
+      "change": 1.1,
+      "change_pct": 2.22,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:04.871382Z"
+      "updated_at": "2026-08-10T19:42:47.121946Z"
     },
     {
       "symbol": "SYK",
       "name": "Stryker Corporation",
-      "price": 343.1,
+      "price": 343.9,
       "prev_close": 339.4,
-      "change": 3.7,
-      "change_pct": 1.09,
+      "change": 4.5,
+      "change_pct": 1.33,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:05.422462Z"
+      "updated_at": "2026-08-10T19:42:47.589916Z"
     },
     {
       "symbol": "COST",
       "name": "Costco Wholesale Corporation",
-      "price": 949.77,
+      "price": 946.46,
       "prev_close": 947.0,
-      "change": 2.77,
-      "change_pct": 0.29,
+      "change": -0.54,
+      "change_pct": -0.06,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:05.944565Z"
+      "updated_at": "2026-08-10T19:42:48.083555Z"
     },
     {
       "symbol": "WMT",
       "name": "Walmart Inc.",
-      "price": 111.82,
+      "price": 112.15,
       "prev_close": 111.78,
-      "change": 0.04,
-      "change_pct": 0.04,
+      "change": 0.37,
+      "change_pct": 0.33,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:06.626868Z"
+      "updated_at": "2026-08-10T19:42:48.531734Z"
     },
     {
       "symbol": "HD",
       "name": "The Home Depot, Inc.",
-      "price": 348.71,
+      "price": 349.52,
       "prev_close": 355.5,
-      "change": -6.79,
-      "change_pct": -1.91,
+      "change": -5.98,
+      "change_pct": -1.68,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:07.252919Z"
+      "updated_at": "2026-08-10T19:42:48.920278Z"
     },
     {
       "symbol": "MCD",
       "name": "McDonald's Corporation",
-      "price": 271.58,
+      "price": 272.62,
       "prev_close": 274.53,
-      "change": -2.95,
-      "change_pct": -1.07,
+      "change": -1.91,
+      "change_pct": -0.7,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:07.902750Z"
+      "updated_at": "2026-08-10T19:42:49.366967Z"
     },
     {
       "symbol": "SBUX",
       "name": "Starbucks Corporation",
-      "price": 104.74,
+      "price": 104.53,
       "prev_close": 105.8,
-      "change": -1.06,
-      "change_pct": -1.0,
+      "change": -1.27,
+      "change_pct": -1.2,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:08.487934Z"
+      "updated_at": "2026-08-10T19:42:49.706997Z"
     },
     {
       "symbol": "NKE",
       "name": "NIKE, Inc.",
-      "price": 41.88,
+      "price": 42.08,
       "prev_close": 41.75,
-      "change": 0.13,
-      "change_pct": 0.31,
+      "change": 0.33,
+      "change_pct": 0.79,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:09.126528Z"
+      "updated_at": "2026-08-10T19:42:50.268691Z"
     },
     {
       "symbol": "LOW",
       "name": "Lowe's Companies, Inc.",
-      "price": 218.24,
+      "price": 218.29,
       "prev_close": 223.3,
-      "change": -5.06,
-      "change_pct": -2.27,
+      "change": -5.01,
+      "change_pct": -2.24,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:09.700141Z"
+      "updated_at": "2026-08-10T19:42:50.859638Z"
     },
     {
       "symbol": "TGT",
       "name": "Target Corporation",
-      "price": 152.61,
+      "price": 152.64,
       "prev_close": 149.41,
-      "change": 3.2,
-      "change_pct": 2.14,
+      "change": 3.23,
+      "change_pct": 2.16,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:10.344862Z"
+      "updated_at": "2026-08-10T19:42:51.497460Z"
     },
     {
       "symbol": "BKNG",
       "name": "Booking Holdings Inc.",
-      "price": 211.71,
+      "price": 211.59,
       "prev_close": 213.14,
-      "change": -1.43,
-      "change_pct": -0.67,
+      "change": -1.55,
+      "change_pct": -0.73,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:10.885771Z"
+      "updated_at": "2026-08-10T19:42:51.851982Z"
     },
     {
       "symbol": "MAR",
       "name": "Marriott International, Inc.",
-      "price": 345.98,
+      "price": 348.45,
       "prev_close": 353.9,
-      "change": -7.92,
-      "change_pct": -2.24,
+      "change": -5.45,
+      "change_pct": -1.54,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:11.420426Z"
+      "updated_at": "2026-08-10T19:42:52.368622Z"
     },
     {
       "symbol": "HLT",
       "name": "Hilton Worldwide Holdings Inc.",
-      "price": 311.8,
+      "price": 311.46,
       "prev_close": 320.0,
-      "change": -8.2,
-      "change_pct": -2.56,
+      "change": -8.54,
+      "change_pct": -2.67,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:12.977490Z"
+      "updated_at": "2026-08-10T19:42:53.709349Z"
     },
     {
       "symbol": "XOM",
       "name": "ExxonMobil Holdings Corporation",
-      "price": 160.05,
+      "price": 159.59,
       "prev_close": 153.1,
-      "change": 6.95,
-      "change_pct": 4.54,
+      "change": 6.49,
+      "change_pct": 4.24,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:13.664638Z"
+      "updated_at": "2026-08-10T19:42:54.316820Z"
     },
     {
       "symbol": "CVX",
       "name": "Chevron Corporation",
-      "price": 194.65,
+      "price": 194.45,
       "prev_close": 186.65,
-      "change": 8.0,
-      "change_pct": 4.29,
+      "change": 7.8,
+      "change_pct": 4.18,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:14.259744Z"
+      "updated_at": "2026-08-10T19:42:54.796806Z"
     },
     {
       "symbol": "CAT",
       "name": "Caterpillar Inc.",
-      "price": 839.98,
+      "price": 839.03,
       "prev_close": 843.02,
-      "change": -3.04,
-      "change_pct": -0.36,
+      "change": -3.99,
+      "change_pct": -0.47,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:15.015810Z"
+      "updated_at": "2026-08-10T19:42:55.288891Z"
     },
     {
       "symbol": "GE",
       "name": "GE Aerospace",
-      "price": 365.48,
+      "price": 365.88,
       "prev_close": 370.58,
-      "change": -5.1,
-      "change_pct": -1.38,
+      "change": -4.7,
+      "change_pct": -1.27,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:15.639324Z"
+      "updated_at": "2026-08-10T19:42:55.746588Z"
     },
     {
       "symbol": "BA",
       "name": "The Boeing Company",
-      "price": 233.76,
+      "price": 233.57,
       "prev_close": 234.25,
-      "change": -0.49,
-      "change_pct": -0.21,
+      "change": -0.68,
+      "change_pct": -0.29,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:16.249700Z"
+      "updated_at": "2026-08-10T19:42:56.196209Z"
     },
     {
       "symbol": "RTX",
       "name": "RTX Corporation",
-      "price": 223.81,
+      "price": 223.78,
       "prev_close": 223.07,
-      "change": 0.74,
-      "change_pct": 0.33,
+      "change": 0.71,
+      "change_pct": 0.32,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:16.871401Z"
+      "updated_at": "2026-08-10T19:42:56.781670Z"
     },
     {
       "symbol": "HON",
       "name": "Honeywell International Inc.",
-      "price": 242.77,
+      "price": 243.04,
       "prev_close": 245.8,
-      "change": -3.03,
-      "change_pct": -1.23,
+      "change": -2.76,
+      "change_pct": -1.12,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:17.636325Z"
+      "updated_at": "2026-08-10T19:42:57.257432Z"
     },
     {
       "symbol": "UPS",
       "name": "United Parcel Service, Inc.",
-      "price": 104.21,
+      "price": 104.47,
       "prev_close": 104.69,
-      "change": -0.48,
-      "change_pct": -0.46,
+      "change": -0.22,
+      "change_pct": -0.21,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:18.265128Z"
+      "updated_at": "2026-08-10T19:42:57.711077Z"
     },
     {
       "symbol": "LMT",
       "name": "Lockheed Martin Corporation",
-      "price": 601.88,
+      "price": 600.58,
       "prev_close": 588.05,
-      "change": 13.83,
-      "change_pct": 2.35,
+      "change": 12.53,
+      "change_pct": 2.13,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:19.006738Z"
+      "updated_at": "2026-08-10T19:42:58.213688Z"
     },
     {
       "symbol": "DE",
       "name": "Deere & Company",
-      "price": 605.84,
+      "price": 609.23,
       "prev_close": 620.83,
-      "change": -14.99,
-      "change_pct": -2.41,
+      "change": -11.6,
+      "change_pct": -1.87,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:19.692677Z"
+      "updated_at": "2026-08-10T19:42:58.746344Z"
     },
     {
       "symbol": "DIS",
       "name": "The Walt Disney Company",
-      "price": 103.14,
+      "price": 103.21,
       "prev_close": 104.9,
-      "change": -1.76,
-      "change_pct": -1.68,
+      "change": -1.69,
+      "change_pct": -1.61,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:20.322652Z"
+      "updated_at": "2026-08-10T19:42:59.232958Z"
     },
     {
       "symbol": "CMCSA",
       "name": "Comcast Corporation",
-      "price": 25.1,
+      "price": 25.16,
       "prev_close": 25.36,
-      "change": -0.26,
-      "change_pct": -1.03,
+      "change": -0.2,
+      "change_pct": -0.79,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:20.918545Z"
+      "updated_at": "2026-08-10T19:42:59.880322Z"
     },
     {
       "symbol": "T",
       "name": "AT&T Inc.",
-      "price": 24.05,
+      "price": 24.06,
       "prev_close": 23.8,
-      "change": 0.25,
-      "change_pct": 1.05,
+      "change": 0.26,
+      "change_pct": 1.09,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:21.568538Z"
+      "updated_at": "2026-08-10T19:43:00.363625Z"
     },
     {
       "symbol": "VZ",
       "name": "Verizon Communications Inc.",
-      "price": 47.04,
+      "price": 47.01,
       "prev_close": 47.05,
-      "change": -0.01,
-      "change_pct": -0.02,
+      "change": -0.04,
+      "change_pct": -0.09,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:22.139727Z"
+      "updated_at": "2026-08-10T19:43:00.957103Z"
     },
     {
       "symbol": "TMUS",
       "name": "T-Mobile US, Inc.",
-      "price": 176.5,
+      "price": 176.9,
       "prev_close": 177.5,
-      "change": -1.0,
-      "change_pct": -0.56,
+      "change": -0.6,
+      "change_pct": -0.34,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:22.644471Z"
+      "updated_at": "2026-08-10T19:43:01.317048Z"
     },
     {
       "symbol": "PYPL",
       "name": "PayPal Holdings, Inc.",
-      "price": 58.54,
+      "price": 58.67,
       "prev_close": 59.1,
-      "change": -0.56,
-      "change_pct": -0.95,
+      "change": -0.43,
+      "change_pct": -0.73,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:23.202496Z"
+      "updated_at": "2026-08-10T19:43:01.772835Z"
     },
     {
       "symbol": "UBER",
       "name": "Uber Technologies, Inc.",
-      "price": 77.58,
+      "price": 77.7,
       "prev_close": 74.96,
-      "change": 2.62,
-      "change_pct": 3.5,
+      "change": 2.74,
+      "change_pct": 3.66,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:23.720155Z"
+      "updated_at": "2026-08-10T19:43:02.212442Z"
     },
     {
       "symbol": "ABNB",
       "name": "Airbnb, Inc.",
-      "price": 185.3,
+      "price": 184.84,
       "prev_close": 178.07,
-      "change": 7.23,
-      "change_pct": 4.06,
+      "change": 6.77,
+      "change_pct": 3.8,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:24.250079Z"
+      "updated_at": "2026-08-10T19:43:02.581352Z"
     },
     {
       "symbol": "SNOW",
       "name": "Snowflake Inc.",
-      "price": 334.58,
+      "price": 334.27,
       "prev_close": 330.2,
-      "change": 4.38,
-      "change_pct": 1.33,
+      "change": 4.07,
+      "change_pct": 1.23,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:24.846417Z"
+      "updated_at": "2026-08-10T19:43:02.883393Z"
     },
     {
       "symbol": "PLTR",
       "name": "Palantir Technologies Inc.",
-      "price": 175.91,
+      "price": 175.6,
       "prev_close": 171.81,
-      "change": 4.1,
-      "change_pct": 2.39,
+      "change": 3.79,
+      "change_pct": 2.21,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:26.483253Z"
+      "updated_at": "2026-08-10T19:43:04.353864Z"
     },
     {
       "symbol": "COIN",
       "name": "Coinbase Global, Inc.",
-      "price": 148.76,
+      "price": 149.32,
       "prev_close": 154.06,
-      "change": -5.3,
-      "change_pct": -3.44,
+      "change": -4.74,
+      "change_pct": -3.08,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:26.975296Z"
+      "updated_at": "2026-08-10T19:43:04.727776Z"
     },
     {
       "symbol": "SHOP",
       "name": "Shopify Inc.",
-      "price": 155.08,
+      "price": 155.35,
       "prev_close": 151.2,
-      "change": 3.88,
-      "change_pct": 2.57,
+      "change": 4.15,
+      "change_pct": 2.74,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:27.650822Z"
+      "updated_at": "2026-08-10T19:43:05.053791Z"
     },
     {
       "symbol": "ZM",
       "name": "Zoom Communications, Inc.",
-      "price": 106.96,
+      "price": 106.86,
       "prev_close": 104.5,
-      "change": 2.46,
-      "change_pct": 2.35,
+      "change": 2.36,
+      "change_pct": 2.26,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:28.254670Z"
+      "updated_at": "2026-08-10T19:43:05.418072Z"
     },
     {
       "symbol": "ROKU",
       "name": "Roku, Inc.",
-      "price": 152.07,
+      "price": 152.12,
       "prev_close": 152.7,
-      "change": -0.63,
-      "change_pct": -0.41,
+      "change": -0.58,
+      "change_pct": -0.38,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:28.785032Z"
+      "updated_at": "2026-08-10T19:43:05.810560Z"
     },
     {
       "symbol": "RBLX",
       "name": "Roblox Corporation",
-      "price": 37.46,
+      "price": 37.4,
       "prev_close": 37.73,
-      "change": -0.27,
-      "change_pct": -0.72,
+      "change": -0.33,
+      "change_pct": -0.87,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:29.339524Z"
+      "updated_at": "2026-08-10T19:43:06.129697Z"
     },
     {
       "symbol": "HOOD",
       "name": "Robinhood Markets, Inc.",
-      "price": 94.3,
+      "price": 94.39,
       "prev_close": 93.6,
-      "change": 0.7,
-      "change_pct": 0.75,
+      "change": 0.79,
+      "change_pct": 0.84,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:29.802378Z"
+      "updated_at": "2026-08-10T19:43:06.435919Z"
     },
     {
       "symbol": "RIVN",
       "name": "Rivian Automotive, Inc.",
-      "price": 16.02,
+      "price": 16.35,
       "prev_close": 16.08,
-      "change": -0.06,
-      "change_pct": -0.37,
+      "change": 0.27,
+      "change_pct": 1.68,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:30.269487Z"
+      "updated_at": "2026-08-10T19:43:06.759653Z"
     },
     {
       "symbol": "LCID",
       "name": "Lucid Group, Inc.",
-      "price": 6.61,
+      "price": 6.57,
       "prev_close": 7.01,
-      "change": -0.4,
-      "change_pct": -5.71,
+      "change": -0.44,
+      "change_pct": -6.28,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:30.823579Z"
+      "updated_at": "2026-08-10T19:43:07.063219Z"
     },
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF Trust",
-      "price": 772.64,
+      "price": 773.12,
       "prev_close": 773.4,
-      "change": -0.76,
-      "change_pct": -0.1,
+      "change": -0.28,
+      "change_pct": -0.04,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:31.494383Z"
+      "updated_at": "2026-08-10T19:43:07.631370Z"
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ Trust",
-      "price": 721.42,
+      "price": 721.71,
       "prev_close": 723.26,
-      "change": -1.84,
-      "change_pct": -0.25,
+      "change": -1.55,
+      "change_pct": -0.21,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:32.060567Z"
+      "updated_at": "2026-08-10T19:43:07.997237Z"
     },
     {
       "symbol": "DIA",
       "name": "State Street SPDR Dow Jones Industrial A",
-      "price": 538.01,
+      "price": 538.45,
       "prev_close": 540.4,
-      "change": -2.39,
-      "change_pct": -0.44,
+      "change": -1.95,
+      "change_pct": -0.36,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:32.698328Z"
+      "updated_at": "2026-08-10T19:43:08.429314Z"
     },
     {
       "symbol": "VTI",
       "name": "Vanguard Morningstar Total Stock Market ",
-      "price": 381.5,
+      "price": 381.71,
       "prev_close": 381.97,
-      "change": -0.47,
-      "change_pct": -0.12,
+      "change": -0.26,
+      "change_pct": -0.07,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:33.339380Z"
+      "updated_at": "2026-08-10T19:43:08.845627Z"
     },
     {
       "symbol": "IWM",
       "name": "iShares Russell 2000 ETF",
-      "price": 299.67,
+      "price": 299.83,
       "prev_close": 301.93,
-      "change": -2.26,
-      "change_pct": -0.75,
+      "change": -2.1,
+      "change_pct": -0.7,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:33.947415Z"
+      "updated_at": "2026-08-10T19:43:09.214048Z"
     },
     {
       "symbol": "TSM",
       "name": "Taiwan Semiconductor Manufacturing Compa",
-      "price": 422.09,
+      "price": 421.77,
       "prev_close": 420.95,
-      "change": 1.14,
-      "change_pct": 0.27,
+      "change": 0.82,
+      "change_pct": 0.19,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:34.947147Z"
+      "updated_at": "2026-08-10T19:43:09.634316Z"
     },
     {
       "symbol": "UMC",
       "name": "United Microelectronics Corporation",
-      "price": 18.94,
+      "price": 18.95,
       "prev_close": 18.7,
-      "change": 0.24,
-      "change_pct": 1.28,
+      "change": 0.25,
+      "change_pct": 1.34,
       "currency": "USD",
       "market": "US",
-      "updated_at": "2026-08-10T18:35:35.633351Z"
+      "updated_at": "2026-08-10T19:43:10.030328Z"
     }
   ],
   "tw_stocks": [
@@ -1067,7 +1067,7 @@
       "change_pct": 0.21,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:39.187948Z"
+      "updated_at": "2026-08-10T19:43:12.619695Z"
     },
     {
       "symbol": "2317",
@@ -1078,7 +1078,7 @@
       "change_pct": 1.54,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:39.843514Z"
+      "updated_at": "2026-08-10T19:43:13.275837Z"
     },
     {
       "symbol": "2454",
@@ -1089,7 +1089,7 @@
       "change_pct": 1.67,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:40.407518Z"
+      "updated_at": "2026-08-10T19:43:13.624553Z"
     },
     {
       "symbol": "2382",
@@ -1100,7 +1100,7 @@
       "change_pct": 5.73,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:41.077115Z"
+      "updated_at": "2026-08-10T19:43:14.043166Z"
     },
     {
       "symbol": "2308",
@@ -1111,7 +1111,7 @@
       "change_pct": 9.67,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:41.735015Z"
+      "updated_at": "2026-08-10T19:43:14.528623Z"
     },
     {
       "symbol": "2303",
@@ -1122,7 +1122,7 @@
       "change_pct": 6.49,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:42.348376Z"
+      "updated_at": "2026-08-10T19:43:14.894311Z"
     },
     {
       "symbol": "2881",
@@ -1133,7 +1133,7 @@
       "change_pct": 0.78,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:42.952179Z"
+      "updated_at": "2026-08-10T19:43:15.317574Z"
     },
     {
       "symbol": "2882",
@@ -1144,7 +1144,7 @@
       "change_pct": 1.41,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:43.591920Z"
+      "updated_at": "2026-08-10T19:43:15.688618Z"
     },
     {
       "symbol": "2891",
@@ -1155,7 +1155,7 @@
       "change_pct": 1.22,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:44.257999Z"
+      "updated_at": "2026-08-10T19:43:16.221996Z"
     },
     {
       "symbol": "2886",
@@ -1166,7 +1166,7 @@
       "change_pct": 0.0,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:44.828881Z"
+      "updated_at": "2026-08-10T19:43:16.630563Z"
     },
     {
       "symbol": "2884",
@@ -1177,7 +1177,7 @@
       "change_pct": -1.05,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:46.368052Z"
+      "updated_at": "2026-08-10T19:43:18.041314Z"
     },
     {
       "symbol": "2885",
@@ -1188,7 +1188,7 @@
       "change_pct": 0.59,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:46.919164Z"
+      "updated_at": "2026-08-10T19:43:18.418668Z"
     },
     {
       "symbol": "2892",
@@ -1199,7 +1199,7 @@
       "change_pct": -1.83,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:47.439410Z"
+      "updated_at": "2026-08-10T19:43:18.774736Z"
     },
     {
       "symbol": "2883",
@@ -1210,7 +1210,7 @@
       "change_pct": 0.65,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:47.960290Z"
+      "updated_at": "2026-08-10T19:43:19.131697Z"
     },
     {
       "symbol": "2887",
@@ -1221,7 +1221,7 @@
       "change_pct": 1.41,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:48.614912Z"
+      "updated_at": "2026-08-10T19:43:19.598727Z"
     },
     {
       "symbol": "2412",
@@ -1232,7 +1232,7 @@
       "change_pct": -1.09,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:50.527856Z"
+      "updated_at": "2026-08-10T19:43:20.787921Z"
     },
     {
       "symbol": "2002",
@@ -1243,7 +1243,7 @@
       "change_pct": 3.15,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:51.166316Z"
+      "updated_at": "2026-08-10T19:43:21.186340Z"
     },
     {
       "symbol": "1301",
@@ -1254,7 +1254,7 @@
       "change_pct": -0.54,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:51.741326Z"
+      "updated_at": "2026-08-10T19:43:21.805942Z"
     },
     {
       "symbol": "1303",
@@ -1265,7 +1265,7 @@
       "change_pct": -1.6,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:52.342590Z"
+      "updated_at": "2026-08-10T19:43:22.281256Z"
     },
     {
       "symbol": "1326",
@@ -1276,7 +1276,7 @@
       "change_pct": -0.17,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:53.932897Z"
+      "updated_at": "2026-08-10T19:43:23.715786Z"
     },
     {
       "symbol": "2207",
@@ -1287,7 +1287,7 @@
       "change_pct": -0.77,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:54.484585Z"
+      "updated_at": "2026-08-10T19:43:24.226707Z"
     },
     {
       "symbol": "2357",
@@ -1298,7 +1298,7 @@
       "change_pct": 0.74,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:55.070937Z"
+      "updated_at": "2026-08-10T19:43:24.578689Z"
     },
     {
       "symbol": "2379",
@@ -1309,7 +1309,7 @@
       "change_pct": 1.2,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:55.845915Z"
+      "updated_at": "2026-08-10T19:43:25.103133Z"
     },
     {
       "symbol": "2395",
@@ -1320,7 +1320,7 @@
       "change_pct": 4.87,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:56.434842Z"
+      "updated_at": "2026-08-10T19:43:25.538902Z"
     },
     {
       "symbol": "3711",
@@ -1331,7 +1331,7 @@
       "change_pct": 7.88,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:56.926712Z"
+      "updated_at": "2026-08-10T19:43:25.910003Z"
     },
     {
       "symbol": "2376",
@@ -1342,7 +1342,7 @@
       "change_pct": 1.6,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:57.581192Z"
+      "updated_at": "2026-08-10T19:43:26.512660Z"
     },
     {
       "symbol": "2408",
@@ -1353,7 +1353,7 @@
       "change_pct": 9.85,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:58.131748Z"
+      "updated_at": "2026-08-10T19:43:26.943587Z"
     },
     {
       "symbol": "3008",
@@ -1364,7 +1364,7 @@
       "change_pct": 0.0,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:58.647339Z"
+      "updated_at": "2026-08-10T19:43:27.365719Z"
     },
     {
       "symbol": "2327",
@@ -1375,7 +1375,7 @@
       "change_pct": 5.52,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:35:59.231391Z"
+      "updated_at": "2026-08-10T19:43:27.729086Z"
     },
     {
       "symbol": "4938",
@@ -1386,7 +1386,7 @@
       "change_pct": 2.76,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:00.739005Z"
+      "updated_at": "2026-08-10T19:43:29.202319Z"
     },
     {
       "symbol": "2337",
@@ -1397,7 +1397,7 @@
       "change_pct": 9.88,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:01.279992Z"
+      "updated_at": "2026-08-10T19:43:29.673976Z"
     },
     {
       "symbol": "2344",
@@ -1408,7 +1408,7 @@
       "change_pct": 9.79,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:02.097293Z"
+      "updated_at": "2026-08-10T19:43:30.088808Z"
     },
     {
       "symbol": "2345",
@@ -1419,7 +1419,7 @@
       "change_pct": -2.48,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:02.803209Z"
+      "updated_at": "2026-08-10T19:43:30.472989Z"
     },
     {
       "symbol": "3034",
@@ -1430,7 +1430,7 @@
       "change_pct": 0.37,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:03.325871Z"
+      "updated_at": "2026-08-10T19:43:30.876255Z"
     },
     {
       "symbol": "3037",
@@ -1441,7 +1441,7 @@
       "change_pct": 4.31,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:03.999009Z"
+      "updated_at": "2026-08-10T19:43:31.362546Z"
     },
     {
       "symbol": "3045",
@@ -1452,7 +1452,7 @@
       "change_pct": -0.45,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:04.627298Z"
+      "updated_at": "2026-08-10T19:43:31.775436Z"
     },
     {
       "symbol": "3231",
@@ -1463,7 +1463,7 @@
       "change_pct": 5.75,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:05.161203Z"
+      "updated_at": "2026-08-10T19:43:32.191956Z"
     },
     {
       "symbol": "3533",
@@ -1474,7 +1474,7 @@
       "change_pct": 2.62,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:05.776908Z"
+      "updated_at": "2026-08-10T19:43:32.626242Z"
     },
     {
       "symbol": "4904",
@@ -1485,7 +1485,7 @@
       "change_pct": -1.46,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:06.427099Z"
+      "updated_at": "2026-08-10T19:43:32.966991Z"
     },
     {
       "symbol": "5871",
@@ -1496,7 +1496,7 @@
       "change_pct": -0.46,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:08.015867Z"
+      "updated_at": "2026-08-10T19:43:34.326758Z"
     },
     {
       "symbol": "6505",
@@ -1507,7 +1507,7 @@
       "change_pct": -2.95,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:08.627474Z"
+      "updated_at": "2026-08-10T19:43:34.741377Z"
     },
     {
       "symbol": "6669",
@@ -1518,7 +1518,7 @@
       "change_pct": -1.31,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:09.126421Z"
+      "updated_at": "2026-08-10T19:43:35.181248Z"
     },
     {
       "symbol": "6770",
@@ -1529,7 +1529,7 @@
       "change_pct": 3.84,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:09.660107Z"
+      "updated_at": "2026-08-10T19:43:35.581876Z"
     },
     {
       "symbol": "8046",
@@ -1540,7 +1540,7 @@
       "change_pct": 2.73,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:10.272421Z"
+      "updated_at": "2026-08-10T19:43:35.953649Z"
     },
     {
       "symbol": "9910",
@@ -1551,7 +1551,7 @@
       "change_pct": 1.74,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:10.842119Z"
+      "updated_at": "2026-08-10T19:43:36.397332Z"
     },
     {
       "symbol": "2105",
@@ -1562,7 +1562,7 @@
       "change_pct": 0.79,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:11.418387Z"
+      "updated_at": "2026-08-10T19:43:36.862665Z"
     },
     {
       "symbol": "2049",
@@ -1573,7 +1573,7 @@
       "change_pct": 0.52,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:11.988052Z"
+      "updated_at": "2026-08-10T19:43:37.287231Z"
     },
     {
       "symbol": "2915",
@@ -1584,7 +1584,7 @@
       "change_pct": 2.69,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:12.524319Z"
+      "updated_at": "2026-08-10T19:43:37.645630Z"
     },
     {
       "symbol": "1216",
@@ -1595,7 +1595,7 @@
       "change_pct": -0.26,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:13.149392Z"
+      "updated_at": "2026-08-10T19:43:38.049626Z"
     },
     {
       "symbol": "2801",
@@ -1606,7 +1606,7 @@
       "change_pct": 0.0,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:14.837686Z"
+      "updated_at": "2026-08-10T19:43:39.561565Z"
     },
     {
       "symbol": "1402",
@@ -1617,7 +1617,7 @@
       "change_pct": -0.91,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:15.438909Z"
+      "updated_at": "2026-08-10T19:43:39.932478Z"
     },
     {
       "symbol": "1101",
@@ -1628,7 +1628,7 @@
       "change_pct": 0.2,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:15.970212Z"
+      "updated_at": "2026-08-10T19:43:40.338161Z"
     },
     {
       "symbol": "1102",
@@ -1639,7 +1639,7 @@
       "change_pct": -0.15,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:16.803231Z"
+      "updated_at": "2026-08-10T19:43:40.721619Z"
     },
     {
       "symbol": "2912",
@@ -1650,7 +1650,7 @@
       "change_pct": -0.68,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:17.502279Z"
+      "updated_at": "2026-08-10T19:43:41.114355Z"
     },
     {
       "symbol": "2880",
@@ -1661,7 +1661,7 @@
       "change_pct": -1.12,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:19.182016Z"
+      "updated_at": "2026-08-10T19:43:42.200700Z"
     },
     {
       "symbol": "5880",
@@ -1672,7 +1672,7 @@
       "change_pct": -0.57,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:19.770898Z"
+      "updated_at": "2026-08-10T19:43:42.655912Z"
     },
     {
       "symbol": "2474",
@@ -1683,7 +1683,7 @@
       "change_pct": 6.91,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:20.346625Z"
+      "updated_at": "2026-08-10T19:43:43.004790Z"
     },
     {
       "symbol": "2352",
@@ -1694,7 +1694,7 @@
       "change_pct": 5.15,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:20.878814Z"
+      "updated_at": "2026-08-10T19:43:43.432870Z"
     },
     {
       "symbol": "2301",
@@ -1705,7 +1705,7 @@
       "change_pct": 9.92,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:22.421017Z"
+      "updated_at": "2026-08-10T19:43:44.848491Z"
     },
     {
       "symbol": "2356",
@@ -1716,7 +1716,7 @@
       "change_pct": 3.12,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:23.088064Z"
+      "updated_at": "2026-08-10T19:43:45.226857Z"
     },
     {
       "symbol": "2324",
@@ -1727,7 +1727,7 @@
       "change_pct": -0.55,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:23.629434Z"
+      "updated_at": "2026-08-10T19:43:45.714635Z"
     },
     {
       "symbol": "2353",
@@ -1738,7 +1738,7 @@
       "change_pct": 2.48,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:24.143474Z"
+      "updated_at": "2026-08-10T19:43:46.135467Z"
     },
     {
       "symbol": "2360",
@@ -1749,7 +1749,7 @@
       "change_pct": 0.0,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:24.720087Z"
+      "updated_at": "2026-08-10T19:43:46.501165Z"
     },
     {
       "symbol": "2347",
@@ -1760,7 +1760,7 @@
       "change_pct": -2.03,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:25.407640Z"
+      "updated_at": "2026-08-10T19:43:46.911661Z"
     },
     {
       "symbol": "2385",
@@ -1771,7 +1771,7 @@
       "change_pct": 1.48,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:25.975838Z"
+      "updated_at": "2026-08-10T19:43:47.285168Z"
     },
     {
       "symbol": "3006",
@@ -1782,7 +1782,7 @@
       "change_pct": 8.04,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:26.602911Z"
+      "updated_at": "2026-08-10T19:43:47.648494Z"
     },
     {
       "symbol": "4958",
@@ -1793,7 +1793,7 @@
       "change_pct": -0.53,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:27.821498Z"
+      "updated_at": "2026-08-10T19:43:48.610871Z"
     },
     {
       "symbol": "6176",
@@ -1804,7 +1804,7 @@
       "change_pct": -2.37,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:30.209341Z"
+      "updated_at": "2026-08-10T19:43:50.505617Z"
     },
     {
       "symbol": "6153",
@@ -1815,7 +1815,7 @@
       "change_pct": 0.91,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:30.756447Z"
+      "updated_at": "2026-08-10T19:43:50.842950Z"
     },
     {
       "symbol": "6202",
@@ -1826,7 +1826,7 @@
       "change_pct": 6.87,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:31.885470Z"
+      "updated_at": "2026-08-10T19:43:51.243156Z"
     },
     {
       "symbol": "6239",
@@ -1837,7 +1837,7 @@
       "change_pct": 9.9,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:32.419843Z"
+      "updated_at": "2026-08-10T19:43:51.623059Z"
     },
     {
       "symbol": "6415",
@@ -1848,7 +1848,7 @@
       "change_pct": 5.44,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:32.910448Z"
+      "updated_at": "2026-08-10T19:43:51.969823Z"
     },
     {
       "symbol": "6451",
@@ -1859,7 +1859,7 @@
       "change_pct": 8.06,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:33.400014Z"
+      "updated_at": "2026-08-10T19:43:52.313853Z"
     },
     {
       "symbol": "6657",
@@ -1870,7 +1870,7 @@
       "change_pct": -0.16,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:35.362654Z"
+      "updated_at": "2026-08-10T19:43:53.571395Z"
     },
     {
       "symbol": "2609",
@@ -1881,7 +1881,7 @@
       "change_pct": 2.18,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:36.975515Z"
+      "updated_at": "2026-08-10T19:43:54.958063Z"
     },
     {
       "symbol": "2615",
@@ -1892,7 +1892,7 @@
       "change_pct": 3.06,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:37.481468Z"
+      "updated_at": "2026-08-10T19:43:55.333891Z"
     },
     {
       "symbol": "2618",
@@ -1903,7 +1903,7 @@
       "change_pct": -3.94,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:38.062211Z"
+      "updated_at": "2026-08-10T19:43:55.757921Z"
     },
     {
       "symbol": "2603",
@@ -1914,7 +1914,7 @@
       "change_pct": 3.38,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:38.609653Z"
+      "updated_at": "2026-08-10T19:43:56.192766Z"
     },
     {
       "symbol": "2605",
@@ -1925,7 +1925,7 @@
       "change_pct": 1.69,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:39.256677Z"
+      "updated_at": "2026-08-10T19:43:56.640864Z"
     },
     {
       "symbol": "2606",
@@ -1936,7 +1936,7 @@
       "change_pct": -0.74,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:39.771333Z"
+      "updated_at": "2026-08-10T19:43:57.138699Z"
     },
     {
       "symbol": "2610",
@@ -1947,7 +1947,7 @@
       "change_pct": -9.11,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:40.421091Z"
+      "updated_at": "2026-08-10T19:43:57.626974Z"
     },
     {
       "symbol": "1904",
@@ -1958,7 +1958,7 @@
       "change_pct": 5.68,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:41.768788Z"
+      "updated_at": "2026-08-10T19:43:58.503865Z"
     },
     {
       "symbol": "1907",
@@ -1969,7 +1969,7 @@
       "change_pct": 0.16,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:42.308993Z"
+      "updated_at": "2026-08-10T19:43:58.936243Z"
     },
     {
       "symbol": "2101",
@@ -1980,7 +1980,7 @@
       "change_pct": -3.38,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:43.887665Z"
+      "updated_at": "2026-08-10T19:44:00.294713Z"
     },
     {
       "symbol": "2103",
@@ -1991,7 +1991,7 @@
       "change_pct": 10.0,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:44.529876Z"
+      "updated_at": "2026-08-10T19:44:00.736884Z"
     },
     {
       "symbol": "1590",
@@ -2002,7 +2002,7 @@
       "change_pct": 2.28,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:45.101470Z"
+      "updated_at": "2026-08-10T19:44:01.241994Z"
     },
     {
       "symbol": "6271",
@@ -2013,7 +2013,7 @@
       "change_pct": 2.07,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:46.480188Z"
+      "updated_at": "2026-08-10T19:44:02.057654Z"
     },
     {
       "symbol": "6278",
@@ -2024,10 +2024,10 @@
       "change_pct": 10.29,
       "currency": "TWD",
       "market": "TW",
-      "updated_at": "2026-08-10T18:36:47.026550Z"
+      "updated_at": "2026-08-10T19:44:02.392825Z"
     }
   ],
   "us_count": 96,
   "tw_count": 88,
-  "updated_at": "2026-08-10T18:36:48.693124Z"
+  "updated_at": "2026-08-10T19:44:03.820634Z"
 }
